@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARIMATI × F45 — Trial Month</title>
+<meta name="description" content="Try DARIMATI at your F45 studio. One month. One pair. Every transition. From training to everyday.">
+<meta property="og:title" content="DARIMATI × F45 — Trial Month">
+<meta property="og:description" content="Try DARIMATI at your F45 studio for a month. Train in it. Buy at your member price.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#111;--white:#fff;--off-white:#fafafa;
+  --gray-50:#f9f9f9;--gray-100:#f3f3f3;--gray-200:#e5e5e5;
+  --gray-300:#d4d4d4;--gray-400:#a3a3a3;--gray-500:#737373;
+  --gray-600:#525252;--gray-700:#404040;
+  --charcoal:#1a1a1a;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --max-w:1080px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);color:var(--black);background:var(--white);
+  line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--font)}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+
+/* ── Sticky Nav ── */
+.nav{position:sticky;top:0;z-index:100;
+  background:rgba(17,17,17,0.97);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-logo{height:18px;opacity:.9}
+.nav-divider{width:1px;height:20px;background:rgba(255,255,255,0.2)}
+.nav-partner{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);
+  letter-spacing:1.5px;text-transform:uppercase}
+.nav-cta{background:var(--white);color:var(--black);padding:8px 20px;
+  border-radius:100px;font-size:12px;font-weight:600;letter-spacing:.5px;
+  text-transform:uppercase;border:none;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+
+/* ── Hero ── */
+.hero{background:var(--black);color:var(--white);
+  padding:80px 24px 72px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 120%,rgba(255,255,255,0.04) 0%,transparent 70%)}
+.hero-collab{display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:32px}
+.hero-collab .dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.3)}
+.hero h1{font-size:clamp(32px,8vw,56px);font-weight:800;line-height:1.05;
+  letter-spacing:-.03em;margin-bottom:8px}
+.hero h1 span{display:block;color:rgba(255,255,255,0.4);font-weight:300;
+  font-size:clamp(18px,4vw,24px);letter-spacing:.02em;margin-top:12px}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.5);margin:24px auto 0;max-width:400px;
+  line-height:1.6;font-weight:400}
+.hero-cta-wrap{margin-top:40px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;
+  background:var(--white);color:var(--black);padding:16px 36px;
+  border-radius:100px;font-size:13px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;border:none;transition:transform .2s,box-shadow .2s}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 32px rgba(255,255,255,0.15)}
+.btn-primary svg{width:16px;height:16px}
+.hero-product{margin-top:48px;position:relative}
+.hero-product img{max-width:520px;margin:0 auto;filter:drop-shadow(0 20px 60px rgba(0,0,0,0.5))}
+
+/* ── Section Defaults ── */
+.section{padding:72px 0}
+.section--dark{background:var(--black);color:var(--white)}
+.section--light{background:var(--gray-50)}
+.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--gray-400);margin-bottom:16px}
+.section--dark .section-eyebrow{color:rgba(255,255,255,0.4)}
+.section-title{font-size:clamp(24px,5vw,36px);font-weight:700;
+  letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
+.section-desc{font-size:15px;color:var(--gray-500);line-height:1.7;max-width:480px}
+.section--dark .section-desc{color:rgba(255,255,255,0.5)}
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+
+/* ── Trial Month Intro ── */
+.trial-intro .trial-quote{font-size:clamp(20px,4vw,28px);font-weight:300;
+  line-height:1.5;letter-spacing:-.01em;max-width:560px;margin:0 auto 24px;
+  text-align:center;color:var(--gray-700)}
+.trial-intro .trial-quote em{font-style:normal;font-weight:700;color:var(--black)}
+.trial-detail{font-size:14px;color:var(--gray-500);text-align:center;
+  max-width:440px;margin:0 auto;line-height:1.7}
+
+/* ── How It Works (4 steps) ── */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
+.step-card{text-align:center;padding:32px 16px;border-radius:16px;
+  background:var(--gray-50);border:1px solid var(--gray-200);transition:transform .2s}
+.step-card:hover{transform:translateY(-4px)}
+.step-num{font-size:11px;font-weight:700;letter-spacing:2px;
+  color:var(--gray-400);margin-bottom:16px}
+.step-icon{width:48px;height:48px;margin:0 auto 16px;border-radius:12px;
+  background:var(--black);display:flex;align-items:center;justify-content:center}
+.step-icon svg{width:24px;height:24px;color:var(--white)}
+.step-label{font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:8px}
+.step-desc{font-size:13px;color:var(--gray-500);line-height:1.5}
+.step-arrow{display:none;align-items:center;justify-content:center;
+  color:var(--gray-300);font-size:20px;align-self:center}
+
+/* ── Why DARIMATI (USP) ── */
+.usp-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.usp-card{padding:28px 24px;border-radius:16px;
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08)}
+.usp-value{font-size:28px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+.usp-label{font-size:11px;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:8px}
+.usp-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5}
+
+/* ── Product Gallery ── */
+.gallery-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:40px}
+.gallery-strip img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px}
+
+/* ── Member Benefit ── */
+.benefit-box{max-width:480px;margin:40px auto 0;padding:40px 32px;
+  border-radius:20px;background:var(--gray-50);border:1px solid var(--gray-200);text-align:center}
+.benefit-box .benefit-title{font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.benefit-box .benefit-sub{font-size:14px;color:var(--gray-500);margin-bottom:28px;line-height:1.6}
+.benefit-box .btn-dark{display:inline-flex;align-items:center;gap:8px;
+  background:var(--black);color:var(--white);padding:16px 36px;
+  border-radius:100px;font-size:13px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;border:none;transition:transform .2s}
+.benefit-box .btn-dark:hover{transform:translateY(-1px)}
+.studio-name-display{font-size:13px;font-weight:600;color:var(--gray-400);
+  letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.qr-placeholder{width:160px;height:160px;margin:24px auto;border-radius:12px;
+  background:var(--white);border:2px solid var(--gray-200);
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;color:var(--gray-400);letter-spacing:1px;text-transform:uppercase}
+
+/* ── Coach Section ── */
+.coach-section{border-top:1px solid var(--gray-200);padding:56px 0}
+.coach-inner{max-width:560px;margin:0 auto;text-align:center}
+.coach-badge{display:inline-block;font-size:11px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;color:var(--gray-500);
+  border:1px solid var(--gray-300);border-radius:100px;padding:6px 16px;margin-bottom:20px}
+.coach-title{font-size:20px;font-weight:700;margin-bottom:8px;letter-spacing:-.01em}
+.coach-sub{font-size:14px;color:var(--gray-500);margin-bottom:24px;line-height:1.6}
+.coach-terms{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;
+  font-size:12px;color:var(--gray-400);font-weight:500}
+.coach-terms span{padding:6px 14px;background:var(--gray-50);border-radius:100px;
+  border:1px solid var(--gray-200)}
+.coach-cta-link{display:inline-block;margin-top:24px;font-size:13px;
+  font-weight:600;color:var(--black);text-decoration:underline;
+  text-underline-offset:3px}
+
+/* ── Final CTA ── */
+.final-cta{background:var(--black);color:var(--white);padding:80px 24px;text-align:center}
+.final-cta h2{font-size:clamp(24px,5vw,36px);font-weight:800;line-height:1.15;
+  letter-spacing:-.02em;margin-bottom:8px}
+.final-cta h2 span{display:block;color:rgba(255,255,255,0.35);font-weight:400;
+  font-size:clamp(16px,3vw,20px);margin-top:8px;letter-spacing:.02em}
+.final-cta .btn-primary{margin-top:32px}
+
+/* ── Footer ── */
+.footer{background:var(--charcoal);color:rgba(255,255,255,0.4);
+  padding:32px 24px;text-align:center;font-size:12px;line-height:1.8}
+.footer a{color:rgba(255,255,255,0.6);text-decoration:underline;text-underline-offset:2px}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .nav-cta-desktop{display:none}
+  .steps-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .usp-grid{grid-template-columns:1fr;gap:12px}
+  .gallery-strip{grid-template-columns:1fr 1fr;gap:3px}
+  .hero{padding:60px 20px 56px}
+  .hero-product img{max-width:320px}
+  .section{padding:56px 0}
+  .benefit-box{margin:32px 16px 0;padding:32px 24px}
+  .coach-section{padding:48px 0}
+  .final-cta{padding:64px 20px}
+}
+@media(max-width:480px){
+  .steps-grid{grid-template-columns:1fr;gap:10px}
+  .step-card{display:flex;align-items:center;gap:16px;text-align:left;padding:20px}
+  .step-icon{margin:0;flex-shrink:0}
+  .step-text{flex:1}
+  .step-num{margin-bottom:4px}
+  .step-label{margin-bottom:4px}
+  .gallery-strip{grid-template-columns:1fr}
+  .gallery-strip img{aspect-ratio:16/9}
+}
+
+/* ── Animations ── */
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ══ Nav ══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="https://www.darimati.us/cdn/shop/files/a8083bc09a0eace4bf1d71ba3d5a2862.png"
+           alt="DARIMATI" class="nav-logo">
+      <div class="nav-divider"></div>
+      <span class="nav-partner">F45</span>
+    </div>
+    <a href="#member-benefit" class="nav-cta nav-cta-desktop">Get Member Price</a>
+  </div>
+</nav>
+
+<!-- ══ Hero ══ -->
+<section class="hero">
+  <div class="hero-collab">
+    <span>DARIMATI</span>
+    <span class="dot"></span>
+    <span>F45</span>
+  </div>
+  <h1>ONE PAIR.<br>FROM TRAINING<br>TO EVERYDAY.
+    <span>Try DARIMATI for a month at your F45 studio.</span>
+  </h1>
+  <div class="hero-cta-wrap">
+    <a href="#member-benefit" class="btn-primary" data-track="hero_cta">
+      UNLOCK F45 MEMBER PRICE
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </a>
+  </div>
+  <div class="hero-product">
+    <img src="https://cdn.shopify.com/s/files/1/0775/5956/2452/files/04.png?v=1776313172"
+         alt="DARIMATI BR-001 Side Profile">
+  </div>
+</section>
+
+<!-- ══ Trial Month Intro ══ -->
+<section class="section trial-intro">
+  <div class="container fade-up">
+    <p class="section-eyebrow text-center">Trial Month</p>
+    <p class="trial-quote">
+      Don't just look at the shoe.<br><em>Train in it.</em>
+    </p>
+    <p class="trial-detail">
+      DARIMATI BR-001 is available to try at select F45 studios.
+      Find your size, wear it through your workout, and feel the difference
+      — from running to functional training to the rest of your day.
+    </p>
+  </div>
+</section>
+
+<!-- ══ How It Works ══ -->
+<section class="section section--light">
+  <div class="container fade-up">
+    <p class="section-eyebrow text-center">How It Works</p>
+    <h2 class="section-title text-center">Four steps. One pair.</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="step-text">
+          <div class="step-label">Try</div>
+          <div class="step-desc">Find your size at your F45 studio.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="step-text">
+          <div class="step-label">Train</div>
+          <div class="step-desc">Wear DARIMATI during your workout.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <div class="step-text">
+          <div class="step-label">Feel</div>
+          <div class="step-desc">Run. Jump. Lift. Move.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/>
+          </svg>
+        </div>
+        <div class="step-text">
+          <div class="step-label">Buy</div>
+          <div class="step-desc">Scan your studio QR and unlock the F45 member price.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Why DARIMATI ══ -->
+<section class="section section--dark">
+  <div class="container fade-up">
+    <p class="section-eyebrow text-center">Why DARIMATI</p>
+    <h2 class="section-title text-center" style="color:#fff">
+      From your F45 workout<br>to the rest of your day.
+    </h2>
+    <p class="section-desc text-center mx-auto" style="margin-bottom:8px">
+      Not another training shoe. A hybrid performance shoe that moves with your whole day.
+    </p>
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="usp-label">All-Day Comfort</div>
+        <div class="usp-value">38/39mm</div>
+        <div class="usp-desc">Premium cushioning stack for impact absorption and all-day support.</div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-label">Lightweight</div>
+        <div class="usp-value">267g</div>
+        <div class="usp-desc">Barely there on your feet. Built light for speed and movement.</div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-label">Premium A-TPU Foam</div>
+        <div class="usp-value">A-TPU</div>
+        <div class="usp-desc">Responsive cushioning for everyday movement and high-intensity training.</div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-label">Full-Length Lug Outsole</div>
+        <div class="usp-value">GRIP</div>
+        <div class="usp-desc">Grip for training, running and everyday movement on any surface.</div>
+      </div>
+    </div>
+
+    <!-- Product Gallery -->
+    <div class="gallery-strip">
+      <img src="https://cdn.shopify.com/s/files/1/0775/5956/2452/files/08.png?v=1776313172"
+           alt="DARIMATI BR-001 Outsole" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0775/5956/2452/files/09.png?v=1776313172"
+           alt="DARIMATI BR-001 Cushioning" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0775/5956/2452/files/10.png?v=1776313172"
+           alt="DARIMATI BR-001 Upper Detail" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ══ F45 Member Benefit ══ -->
+<section class="section" id="member-benefit">
+  <div class="container fade-up">
+    <p class="section-eyebrow text-center">F45 Member Benefit</p>
+    <h2 class="section-title text-center">Tried it. Liked it?<br>Your F45 price is here.</h2>
+    <div class="benefit-box">
+      <div class="studio-name-display" id="studioNameDisplay"></div>
+      <div class="benefit-title">Special Member Price</div>
+      <div class="benefit-sub">
+        Exclusive pricing for F45 members who have tried DARIMATI at their studio.
+        Scan your studio QR or enter your offer code below.
+      </div>
+      <div class="qr-placeholder" id="qrPlaceholder">
+        <span>QR CODE</span>
+      </div>
+      <div style="margin:16px 0 24px">
+        <input type="text" id="offerCodeInput" placeholder="Enter offer code"
+          style="width:100%;max-width:280px;padding:12px 16px;border:2px solid var(--gray-200);
+          border-radius:10px;font-size:14px;font-weight:500;text-align:center;
+          font-family:var(--font);letter-spacing:1px;text-transform:uppercase;outline:none;
+          transition:border-color .2s"
+          onfocus="this.style.borderColor='var(--black)'"
+          onblur="this.style.borderColor='var(--gray-200)'">
+      </div>
+      <button class="btn-dark" id="buyBtn" data-track="buy_cta" onclick="handlePurchase()">
+        GET YOUR F45 MEMBER PRICE
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ For Coaches ══ -->
+<section class="coach-section">
+  <div class="container fade-up">
+    <div class="coach-inner">
+      <div class="coach-badge">For F45 Coaches</div>
+      <h3 class="coach-title">Train in DARIMATI.</h3>
+      <p class="coach-sub">
+        Special coach pricing available during Trial Month.<br>
+        Lead by example — wear what you'd recommend.
+      </p>
+      <div class="coach-terms">
+        <span>Up to 30% OFF</span>
+        <span>Max 5 pairs per studio</span>
+        <span>Personal use only</span>
+      </div>
+      <a href="#" class="coach-cta-link" id="coachLink" data-track="coach_cta">
+        Request Coach Access &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Final CTA ══ -->
+<section class="final-cta">
+  <div class="container fade-up">
+    <h2>ONE MONTH.<br>ONE PAIR.<br>EVERY TRANSITION.
+      <span>From your F45 workout to the rest of your day.</span>
+    </h2>
+    <a href="#member-benefit" class="btn-primary" data-track="final_cta">
+      GET YOUR F45 MEMBER PRICE
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 8h10M9 4l4 4-4 4"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══ Footer ══ -->
+<footer class="footer">
+  <div class="container">
+    <p style="margin-bottom:4px">
+      <strong style="color:rgba(255,255,255,0.7)">DARIMATI</strong> &mdash; Seoul, South Korea
+    </p>
+    <p>
+      <a href="https://www.darimati.us" target="_blank">darimati.us</a> &nbsp;|&nbsp;
+      <a href="https://www.instagram.com/darimati_us" target="_blank">@darimati_us</a> &nbsp;|&nbsp;
+      <a href="mailto:support@darimati.us">support@darimati.us</a>
+    </p>
+    <p style="margin-top:12px;font-size:11px;color:rgba(255,255,255,0.25)">
+      &copy; 2026 DARIMATI Inc. All rights reserved. Trial program terms apply.
+    </p>
+  </div>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════
+   DARIMATI × F45 Trial — Studio Tracking
+   ══════════════════════════════════════════ */
+
+(function(){
+  'use strict';
+
+  // ── Parse URL params ──
+  const params = new URLSearchParams(window.location.search);
+  const studioId   = params.get('studio')  || '';   // e.g. f45-gangnam
+  const studioName = params.get('name')    || '';   // e.g. F45 Gangnam
+  const offerCode  = params.get('code')    || '';   // e.g. F45GN30
+  const affiliate  = params.get('ref')     || '';   // affiliate ID
+
+  // ── Populate studio info ──
+  const studioDisplay = document.getElementById('studioNameDisplay');
+  if(studioName){
+    studioDisplay.textContent = studioName;
+  } else if(studioId){
+    studioDisplay.textContent = studioId.replace(/-/g,' ').toUpperCase();
+  }
+
+  if(offerCode){
+    document.getElementById('offerCodeInput').value = offerCode;
+  }
+
+  // ── QR Code (dynamic) ──
+  // In production, replace with actual QR library (e.g. qrcode.js)
+  const qrEl = document.getElementById('qrPlaceholder');
+  if(studioId){
+    const qrUrl = `https://www.darimati.us/f45?studio=${studioId}&ref=${affiliate}`;
+    qrEl.innerHTML = `<div style="text-align:center;padding:12px">
+      <div style="font-size:10px;color:var(--gray-400);margin-bottom:4px">STUDIO QR</div>
+      <div style="width:120px;height:120px;background:var(--gray-100);border-radius:8px;
+        display:flex;align-items:center;justify-content:center;margin:0 auto;
+        font-size:9px;color:var(--gray-400);word-break:break-all;padding:8px">
+        ${qrUrl}
+      </div>
+    </div>`;
+  }
+
+  // ── Analytics / Event Tracking ──
+  function trackEvent(eventName, data){
+    const payload = {
+      event: eventName,
+      studio_id: studioId,
+      studio_name: studioName,
+      offer_code: offerCode,
+      affiliate_id: affiliate,
+      timestamp: new Date().toISOString(),
+      page_url: window.location.href,
+      ...data
+    };
+
+    // Console log for dev — replace with actual analytics endpoint
+    console.log('[DARIMATI-F45]', JSON.stringify(payload));
+
+    // ── Send to analytics endpoint ──
+    // Production: replace with actual endpoint
+    // navigator.sendBeacon('/api/track', JSON.stringify(payload));
+
+    // ── GTM/GA4 dataLayer push ──
+    if(window.dataLayer){
+      window.dataLayer.push({
+        event: 'darimati_f45_' + eventName,
+        ...payload
+      });
+    }
+  }
+
+  // ── Page View ──
+  trackEvent('page_view', { referrer: document.referrer });
+
+  // ── Track CTA clicks ──
+  document.querySelectorAll('[data-track]').forEach(function(el){
+    el.addEventListener('click', function(){
+      trackEvent('cta_click', { cta_name: this.getAttribute('data-track') });
+    });
+  });
+
+  // ── Track QR visit (if studio param present) ──
+  if(studioId){
+    trackEvent('qr_visit', {});
+  }
+
+  // ── Track product view (scroll to member benefit) ──
+  const benefitSection = document.getElementById('member-benefit');
+  if(benefitSection){
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          trackEvent('product_view', {});
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(benefitSection);
+  }
+
+  // ── Purchase handler ──
+  window.handlePurchase = function(){
+    const code = document.getElementById('offerCodeInput').value.trim();
+    trackEvent('purchase_intent', { entered_code: code });
+
+    // Redirect to Shopify with tracking params
+    let shopUrl = 'https://www.darimati.us/products/bridge-001';
+    const shopParams = new URLSearchParams();
+    if(studioId)  shopParams.set('utm_source', 'f45_trial');
+    if(studioId)  shopParams.set('utm_medium', studioId);
+    if(offerCode || code) shopParams.set('discount', offerCode || code);
+    if(affiliate) shopParams.set('ref', affiliate);
+    shopParams.set('utm_campaign', 'f45_trial_month');
+
+    if(shopParams.toString()){
+      shopUrl += '?' + shopParams.toString();
+    }
+
+    window.open(shopUrl, '_blank');
+  };
+
+  // ── Scroll reveal ──
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if(fadeEls.length){
+    const revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(function(el){ revealObserver.observe(el); });
+  }
+
+})();
+</script>
+
+</body>
+</html>
