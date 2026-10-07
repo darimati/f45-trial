@@ -225,8 +225,6 @@ html{scroll-behavior:smooth}
   </div>
 </footer>
 
-<iframe name="shopify-frame" style="display:none" aria-hidden="true"></iframe>
-
 <script>
 (function(){
   // ---------- athletes ----------
@@ -307,24 +305,16 @@ html{scroll-behavior:smooth}
     return true;
   }
 
-  // ---------- submit to Shopify via hidden iframe ----------
-  function postToShopify(pairs, formType){
-    var form=document.createElement('form');
-    form.method='POST';
-    form.action='https://www.darimati.us/contact';
-    form.target='shopify-frame';
-    form.style.display='none';
-    var addField=function(n,v){var inp=document.createElement('input');inp.type='hidden';inp.name=n;inp.value=v;form.appendChild(inp)};
-    addField('form_type','contact');
-    addField('utf8','\u2713');
-    pairs.forEach(function(p){addField(p[0],p[1])});
-    document.body.appendChild(form);
-    form.submit();
-    setTimeout(function(){form.remove()},2000);
-  }
-
-  function branchPairs(){
-    return [['contact[email]',val('b-mail')],['contact[name]',val('b-name')+' / '+val('b-mgr')],['contact[phone]',val('b-tel')],['contact[지점명]',val('b-name')]];
+  // ---------- FormSubmit.co AJAX backend ----------
+  function sendForm(data, subject){
+    data._subject=subject;
+    data._template='table';
+    data._captcha='false';
+    return fetch('https://formsubmit.co/ajax/company@darimati.us',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    }).then(function(r){return r.json()});
   }
 
   // ---------- Form A submit ----------
@@ -332,23 +322,35 @@ html{scroll-behavior:smooth}
     e.preventDefault();
     var m=document.getElementById('a-msg');
     if(!branchOK(m))return;
-    var cards=[].slice.call(list.querySelectorAll('.athlete')), pairs=branchPairs(), bad=[];
-    pairs.push(['contact[구분]','A. HYROX 출전 회원 신발 지원']);
+    var cards=[].slice.call(list.querySelectorAll('.athlete')), bad=[];
+    var data={
+      '구분':'A. HYROX 출전 회원 신발 지원',
+      '지점명':val('b-name'),
+      '담당자':val('b-mgr'),
+      '담당자 연락처':val('b-tel'),
+      '담당자 이메일':val('b-mail')
+    };
     cards.forEach(function(c,n){
       var vals={};c.querySelectorAll('[data-k]').forEach(function(f){vals[f.dataset.k]=(f.value||'').trim()});
       ['성명','연락처','사이즈','출전 대회','부문'].forEach(function(k){if(!vals[k])bad.push('선수 '+(n+1)+' '+k)});
-      pairs.push(['contact[선수'+(n+1)+']',[vals['성명'],vals['연락처'],vals['인스타그램']||'-',vals['사이즈']+'mm',vals['출전 대회'],vals['부문']].join(' / ')]);
+      data['선수'+(n+1)]=[vals['성명'],vals['연락처'],vals['인스타그램']||'-',vals['사이즈']+'mm',vals['출전 대회'],vals['부문']].join(' / ');
     });
     if(bad.length){show(m,false,'다음 항목을 입력해 주세요: '+bad.join(', '));return}
     if(!document.getElementById('a-consent').checked){show(m,false,'개인정보 수집/이용 동의에 체크해 주세요.');return}
     if(!document.getElementById('a-mkt').checked){show(m,false,'콘텐츠/마케팅 활용 동의에 체크해 주세요.');return}
-    pairs.push(['contact[동의]','개인정보 수집/이용 동의, 콘텐츠/마케팅 활용 동의']);
+    data['동의']='개인정보 수집/이용 동의, 콘텐츠/마케팅 활용 동의';
     var btn=document.getElementById('a-submit');btn.disabled=true;btn.textContent='접수 중...';
-    postToShopify(pairs,'A');
-    setTimeout(function(){
-      show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+    sendForm(data,'[HYROX] 출전 회원 신발 지원 - '+val('b-name')).then(function(res){
+      if(res.success){
+        show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+      } else {
+        show(m,false,'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+      }
       btn.disabled=false;btn.textContent='출전 회원 지원 신청하기';
-    },1500);
+    }).catch(function(){
+      show(m,false,'네트워크 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+      btn.disabled=false;btn.textContent='출전 회원 지원 신청하기';
+    });
   });
 
   // ---------- Form B submit ----------
@@ -361,19 +363,29 @@ html{scroll-behavior:smooth}
     if(!document.getElementById('b-consent').checked){show(m,false,'개인정보 수집/이용 동의에 체크해 주세요.');return}
     var w1=weeks.find(function(x){return x.id===pick1}), w2=pick2?weeks.find(function(x){return x.id===pick2}):null;
     var model=[mB.checked?'블랙':null,mG.checked?'그레이 믹스 가능':null].filter(Boolean).join(', ');
-    var pairs=branchPairs().concat([
-      ['contact[구분]','B. 1주일 지점 체험'],
-      ['contact[체험 모델]',model],
-      ['contact[1지망]',weekLabel(w1)],
-      ['contact[2지망]',w2?weekLabel(w2):'-'],
-      ['contact[body]',val('b-note')||'-']
-    ]);
+    var data={
+      '구분':'B. 1주일 지점 체험',
+      '지점명':val('b-name'),
+      '담당자':val('b-mgr'),
+      '담당자 연락처':val('b-tel'),
+      '담당자 이메일':val('b-mail'),
+      '체험 모델':model,
+      '1지망':weekLabel(w1),
+      '2지망':w2?weekLabel(w2):'-',
+      '요청 사항':val('b-note')||'-'
+    };
     var btn=document.getElementById('b-submit');btn.disabled=true;btn.textContent='접수 중...';
-    postToShopify(pairs,'B');
-    setTimeout(function(){
-      show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+    sendForm(data,'[HYROX] 지점 체험 신청 - '+val('b-name')).then(function(res){
+      if(res.success){
+        show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+      } else {
+        show(m,false,'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+      }
       btn.disabled=false;btn.textContent='체험 주차 신청하기';
-    },1500);
+    }).catch(function(){
+      show(m,false,'네트워크 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+      btn.disabled=false;btn.textContent='체험 주차 신청하기';
+    });
   });
 })();
 </script>
