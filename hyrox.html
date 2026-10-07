@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARIMATI × F45 — HYROX Campaign</title>
+<meta name="description" content="F45 회원을 위한 DARIMATI HYROX 캠페인. 출전 선수 신발 지원, 포디움 리워드, 회원 할인.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#111;--white:#fff;
+  --gray-50:#f9f9f9;--gray-100:#f3f3f3;--gray-200:#e5e5e5;
+  --gray-300:#d4d4d4;--gray-400:#a3a3a3;--gray-500:#737373;
+  --gray-600:#525252;--gray-700:#404040;
+  --accent:#e63946;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --max-w:720px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);color:var(--black);background:var(--white);
+  line-height:1.6;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:var(--font)}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+
+/* ── Nav ── */
+.nav{position:sticky;top:0;z-index:100;
+  background:rgba(17,17,17,0.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,0.08)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;height:52px}
+.nav-brand{display:flex;align-items:center;gap:10px}
+.nav-logo{height:16px;opacity:.9}
+.nav-divider{width:1px;height:18px;background:rgba(255,255,255,0.2)}
+.nav-partner{font-size:11px;font-weight:600;color:rgba(255,255,255,0.5);
+  letter-spacing:1.5px;text-transform:uppercase}
+.nav-tag{font-size:10px;font-weight:700;color:var(--accent);
+  letter-spacing:1px;text-transform:uppercase;
+  border:1px solid var(--accent);border-radius:100px;padding:3px 10px}
+
+/* ── Hero ── */
+.hero{background:var(--black);color:var(--white);
+  padding:60px 24px 48px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 120%,rgba(230,57,70,0.06) 0%,transparent 60%)}
+.hero-collab{display:inline-flex;align-items:center;gap:8px;
+  font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:24px;
+  border:1px solid rgba(230,57,70,0.3);border-radius:100px;padding:6px 16px}
+.hero h1{font-size:clamp(28px,7vw,44px);font-weight:900;line-height:1.1;
+  letter-spacing:-.03em;margin-bottom:8px}
+.hero h1 .sub{display:block;color:rgba(255,255,255,0.4);font-weight:300;
+  font-size:clamp(14px,3.5vw,18px);letter-spacing:.01em;margin-top:12px;line-height:1.5}
+.hero-product{margin-top:32px;position:relative}
+.hero-product img{max-width:400px;margin:0 auto;filter:drop-shadow(0 16px 48px rgba(0,0,0,0.5))}
+
+/* ── Benefits ── */
+.benefits{padding:48px 0;background:var(--gray-50);border-bottom:1px solid var(--gray-200)}
+.benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.benefit-card{padding:20px 16px;border-radius:12px;background:var(--white);
+  border:1px solid var(--gray-200);text-align:center}
+.benefit-num{font-size:10px;font-weight:700;color:var(--accent);
+  letter-spacing:1.5px;margin-bottom:8px}
+.benefit-title{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
+.benefit-desc{font-size:12px;color:var(--gray-500);line-height:1.5}
+
+/* ── Section ── */
+.section{padding:48px 0}
+.section-eyebrow{font-size:10px;font-weight:700;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--gray-400);margin-bottom:12px}
+.section-title{font-size:clamp(20px,5vw,28px);font-weight:700;
+  letter-spacing:-.02em;line-height:1.2;margin-bottom:8px}
+.section-desc{font-size:14px;color:var(--gray-500);line-height:1.6;margin-bottom:24px}
+
+/* ── Form ── */
+.form-section{padding:48px 0;border-top:1px solid var(--gray-200)}
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-size:12px;font-weight:600;letter-spacing:.5px;
+  color:var(--gray-600);margin-bottom:6px}
+.form-label .required{color:var(--accent);margin-left:2px}
+.form-input{width:100%;padding:12px 14px;border:1.5px solid var(--gray-200);
+  border-radius:10px;font-size:14px;font-family:var(--font);
+  outline:none;transition:border-color .2s}
+.form-input:focus{border-color:var(--black)}
+.form-input::placeholder{color:var(--gray-300)}
+select.form-input{appearance:none;background:var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 5l3 3 3-3' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-hint{font-size:11px;color:var(--gray-400);margin-top:4px;line-height:1.4}
+
+/* ── Participant Cards ── */
+.participant-card{background:var(--gray-50);border:1px solid var(--gray-200);
+  border-radius:14px;padding:20px;margin-bottom:16px}
+.participant-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.participant-num{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--gray-500)}
+.participant-toggle{font-size:12px;color:var(--accent);font-weight:600;
+  background:none;border:none;padding:4px 8px}
+.participant-body{display:grid;gap:14px}
+
+/* ── Color Selection ── */
+.color-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.color-option{position:relative}
+.color-option input{position:absolute;opacity:0;pointer-events:none}
+.color-option label{display:flex;align-items:center;gap:10px;padding:12px 14px;
+  border:1.5px solid var(--gray-200);border-radius:10px;cursor:pointer;
+  transition:border-color .2s,background .2s}
+.color-option input:checked + label{border-color:var(--black);background:var(--gray-50)}
+.color-swatch{width:24px;height:24px;border-radius:50%;border:1px solid var(--gray-200);flex-shrink:0}
+.color-swatch--gray{background:linear-gradient(135deg,#a8a8a8,#888)}
+.color-swatch--black{background:linear-gradient(135deg,#333,#111)}
+.color-info{flex:1}
+.color-name{font-size:13px;font-weight:600;letter-spacing:-.01em}
+.color-avail{font-size:10px;font-weight:500;letter-spacing:.3px}
+.color-avail--now{color:#16a34a}
+.color-avail--later{color:var(--accent)}
+
+/* ── Week Calendar ── */
+.week-calendar{display:grid;gap:8px;margin-top:8px}
+.week-option{position:relative}
+.week-option input{position:absolute;opacity:0;pointer-events:none}
+.week-option label{display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;border:1.5px solid var(--gray-200);border-radius:10px;
+  cursor:pointer;transition:border-color .2s,background .2s}
+.week-option input:checked + label{border-color:var(--black);background:var(--gray-50)}
+.week-option input:disabled + label{opacity:.4;cursor:not-allowed}
+.week-label{font-size:13px;font-weight:600}
+.week-dates{font-size:11px;color:var(--gray-500)}
+.week-badge{font-size:9px;font-weight:700;letter-spacing:.5px;
+  padding:3px 8px;border-radius:100px;text-transform:uppercase}
+.week-badge--available{background:#dcfce7;color:#16a34a}
+.week-badge--black{background:#fef3c7;color:#d97706}
+
+/* ── Gray Check ── */
+.gray-check{display:flex;align-items:flex-start;gap:10px;padding:14px;
+  background:var(--gray-50);border:1px solid var(--gray-200);border-radius:10px;margin-top:8px}
+.gray-check input[type=checkbox]{width:18px;height:18px;margin-top:1px;accent-color:var(--black)}
+.gray-check-text{flex:1}
+.gray-check-title{font-size:13px;font-weight:600}
+.gray-check-desc{font-size:11px;color:var(--gray-500);line-height:1.4;margin-top:2px}
+
+/* ── Submit ── */
+.submit-section{padding:32px 0 64px}
+.btn-submit{width:100%;padding:16px;background:var(--black);color:var(--white);
+  border:none;border-radius:12px;font-size:14px;font-weight:700;
+  letter-spacing:.5px;text-transform:uppercase;
+  transition:opacity .2s,transform .2s}
+.btn-submit:hover{opacity:.9;transform:translateY(-1px)}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+.submit-note{font-size:11px;color:var(--gray-400);text-align:center;margin-top:12px;line-height:1.5}
+
+/* ── Success ── */
+.success-overlay{display:none;position:fixed;inset:0;z-index:200;
+  background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;padding:24px}
+.success-overlay.active{display:flex}
+.success-card{background:var(--white);border-radius:20px;padding:40px 32px;
+  max-width:400px;width:100%;text-align:center}
+.success-icon{width:56px;height:56px;border-radius:50%;background:#dcfce7;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.success-icon svg{width:28px;height:28px;color:#16a34a}
+.success-title{font-size:20px;font-weight:700;margin-bottom:8px}
+.success-desc{font-size:14px;color:var(--gray-500);line-height:1.6;margin-bottom:24px}
+.btn-close{padding:12px 32px;background:var(--black);color:var(--white);
+  border:none;border-radius:10px;font-size:13px;font-weight:600}
+
+/* ── Footer ── */
+.footer{background:var(--black);color:rgba(255,255,255,0.4);
+  padding:32px 24px;text-align:center;font-size:11px;line-height:1.8}
+
+/* ── HYROX Record Banner ── */
+.record-banner{padding:32px 0;border-bottom:1px solid var(--gray-200)}
+.record-title{font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--gray-400);text-align:center;margin-bottom:16px}
+.record-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.record-card{text-align:center;padding:16px 12px;border-radius:12px;
+  background:var(--gray-50);border:1px solid var(--gray-200)}
+.record-place{font-size:10px;font-weight:700;color:var(--accent);
+  letter-spacing:1px;margin-bottom:4px}
+.record-name{font-size:13px;font-weight:700;letter-spacing:-.01em}
+.record-event{font-size:10px;color:var(--gray-500);margin-top:2px}
+.record-shoe{font-size:10px;color:var(--gray-400);margin-top:4px;
+  font-weight:600;letter-spacing:.5px}
+
+/* ── Responsive ── */
+@media(max-width:480px){
+  .benefits-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .color-options{grid-template-columns:1fr}
+  .record-grid{grid-template-columns:1fr;gap:8px}
+  .hero{padding:48px 20px 40px}
+  .hero-product img{max-width:280px}
+}
+
+/* ── Animations ── */
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ══ Nav ══ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <img src="https://www.darimati.us/cdn/shop/files/a8083bc09a0eace4bf1d71ba3d5a2862.png"
+           alt="DARIMATI" class="nav-logo">
+      <div class="nav-divider"></div>
+      <span class="nav-partner">F45</span>
+    </div>
+    <span class="nav-tag">HYROX</span>
+  </div>
+</nav>
+
+<!-- ══ Hero ══ -->
+<section class="hero">
+  <div class="hero-collab">DARIMATI × F45 HYROX</div>
+  <h1>RACE READY.
+    <span class="sub">HYROX 출전을 준비하는 F45 회원을 위한<br>DARIMATI 트라이얼 캠페인</span>
+  </h1>
+  <div class="hero-product">
+    <img src="https://cdn.shopify.com/s/files/1/0775/5956/2452/files/04.png?v=1776313172"
+         alt="DARIMATI BR-001">
+  </div>
+</section>
+
+<!-- ══ HYROX Record Banner ══ -->
+<section class="record-banner">
+  <div class="container">
+    <div class="record-title">HYROX 실전 착용 입상 기록</div>
+    <div class="record-grid">
+      <div class="record-card">
+        <div class="record-place">PODIUM</div>
+        <div class="record-name">선수 A</div>
+        <div class="record-event">HYROX 2025</div>
+        <div class="record-shoe">BR-001 착용</div>
+      </div>
+      <div class="record-card">
+        <div class="record-place">PODIUM</div>
+        <div class="record-name">선수 B</div>
+        <div class="record-event">HYROX 2025</div>
+        <div class="record-shoe">BR-001 착용</div>
+      </div>
+      <div class="record-card">
+        <div class="record-place">PODIUM</div>
+        <div class="record-name">선수 C</div>
+        <div class="record-event">HYROX 2025</div>
+        <div class="record-shoe">BR-001 착용</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Benefits ══ -->
+<section class="benefits">
+  <div class="container fade-up">
+    <p class="section-eyebrow" style="text-align:center">캠페인 혜택</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-num">01</div>
+        <div class="benefit-title">출전 선수 신발 지원</div>
+        <div class="benefit-desc">HYROX 출전 회원 최대 3명에게<br>DARIMATI 신발 무상 지원</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">02</div>
+        <div class="benefit-title">포디움 리워드</div>
+        <div class="benefit-desc">포디움 100만원<br>1등 총 200만원 리워드</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">03</div>
+        <div class="benefit-title">1주일 지점 체험</div>
+        <div class="benefit-desc">지점에서 회원들이 직접<br>신어볼 수 있는 체험 운영</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">04</div>
+        <div class="benefit-title">회원 할인 + 지점 수익</div>
+        <div class="benefit-desc">회원 10% 할인<br>판매금액 10% 지점 제공</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Form: F45 지점 정보 (Lead 1) ══ -->
+<form id="campaignForm" novalidate>
+<section class="form-section">
+  <div class="container fade-up">
+    <p class="section-eyebrow">LEAD 1</p>
+    <h2 class="section-title">F45 지점 정보</h2>
+    <p class="section-desc">캠페인 참여를 원하는 F45 지점 정보를 입력해 주세요.</p>
+
+    <div class="form-group">
+      <label class="form-label">지점명 <span class="required">*</span></label>
+      <input type="text" class="form-input" id="studioName" placeholder="예: F45 강남" required>
+    </div>
+    <div class="form-group">
+      <label class="form-label">담당자명 <span class="required">*</span></label>
+      <input type="text" class="form-input" id="managerName" placeholder="담당자 이름" required>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">연락처 <span class="required">*</span></label>
+        <input type="tel" class="form-input" id="managerPhone" placeholder="010-0000-0000" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">이메일</label>
+        <input type="email" class="form-input" id="managerEmail" placeholder="email@example.com">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Form: HYROX 출전 선수 (Lead 2) ══ -->
+<section class="form-section">
+  <div class="container fade-up">
+    <p class="section-eyebrow">LEAD 2</p>
+    <h2 class="section-title">HYROX 출전 선수 정보</h2>
+    <p class="section-desc">HYROX에 출전하며 DARIMATI 신발 지원을 받을 선수 정보를 입력해 주세요. (최대 3명)</p>
+
+    <!-- Participant 1 -->
+    <div class="participant-card" id="p1">
+      <div class="participant-header">
+        <span class="participant-num">선수 1</span>
+      </div>
+      <div class="participant-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">이름 <span class="required">*</span></label>
+            <input type="text" class="form-input" name="p1_name" placeholder="선수 이름" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">연락처 <span class="required">*</span></label>
+            <input type="tel" class="form-input" name="p1_phone" placeholder="010-0000-0000" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">발 사이즈 <span class="required">*</span></label>
+            <select class="form-input" name="p1_size" required>
+              <option value="">선택</option>
+              <option>230</option><option>235</option><option>240</option>
+              <option>245</option><option>250</option><option>255</option>
+              <option>260</option><option>265</option><option>270</option>
+              <option>275</option><option>280</option><option>285</option>
+              <option>290</option><option>295</option><option>300</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">선호 컬러 <span class="required">*</span></label>
+            <div class="color-options">
+              <div class="color-option">
+                <input type="radio" name="p1_color" id="p1_gray" value="그레이" required>
+                <label for="p1_gray">
+                  <span class="color-swatch color-swatch--gray"></span>
+                  <span class="color-info">
+                    <span class="color-name">그레이</span>
+                    <span class="color-avail color-avail--now">즉시 가능</span>
+                  </span>
+                </label>
+              </div>
+              <div class="color-option">
+                <input type="radio" name="p1_color" id="p1_black" value="블랙">
+                <label for="p1_black">
+                  <span class="color-swatch color-swatch--black"></span>
+                  <span class="color-info">
+                    <span class="color-name">블랙</span>
+                    <span class="color-avail color-avail--later">10/13~ 가능</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Participant 2 -->
+    <div class="participant-card" id="p2">
+      <div class="participant-header">
+        <span class="participant-num">선수 2</span>
+        <button type="button" class="participant-toggle" onclick="toggleParticipant(2)">접기</button>
+      </div>
+      <div class="participant-body" id="p2_body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">이름</label>
+            <input type="text" class="form-input" name="p2_name" placeholder="선수 이름">
+          </div>
+          <div class="form-group">
+            <label class="form-label">연락처</label>
+            <input type="tel" class="form-input" name="p2_phone" placeholder="010-0000-0000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">발 사이즈</label>
+            <select class="form-input" name="p2_size">
+              <option value="">선택</option>
+              <option>230</option><option>235</option><option>240</option>
+              <option>245</option><option>250</option><option>255</option>
+              <option>260</option><option>265</option><option>270</option>
+              <option>275</option><option>280</option><option>285</option>
+              <option>290</option><option>295</option><option>300</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">선호 컬러</label>
+            <div class="color-options">
+              <div class="color-option">
+                <input type="radio" name="p2_color" id="p2_gray" value="그레이">
+                <label for="p2_gray">
+                  <span class="color-swatch color-swatch--gray"></span>
+                  <span class="color-info">
+                    <span class="color-name">그레이</span>
+                    <span class="color-avail color-avail--now">즉시 가능</span>
+                  </span>
+                </label>
+              </div>
+              <div class="color-option">
+                <input type="radio" name="p2_color" id="p2_black" value="블랙">
+                <label for="p2_black">
+                  <span class="color-swatch color-swatch--black"></span>
+                  <span class="color-info">
+                    <span class="color-name">블랙</span>
+                    <span class="color-avail color-avail--later">10/13~ 가능</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Participant 3 -->
+    <div class="participant-card" id="p3">
+      <div class="participant-header">
+        <span class="participant-num">선수 3</span>
+        <button type="button" class="participant-toggle" onclick="toggleParticipant(3)">접기</button>
+      </div>
+      <div class="participant-body" id="p3_body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">이름</label>
+            <input type="text" class="form-input" name="p3_name" placeholder="선수 이름">
+          </div>
+          <div class="form-group">
+            <label class="form-label">연락처</label>
+            <input type="tel" class="form-input" name="p3_phone" placeholder="010-0000-0000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">발 사이즈</label>
+            <select class="form-input" name="p3_size">
+              <option value="">선택</option>
+              <option>230</option><option>235</option><option>240</option>
+              <option>245</option><option>250</option><option>255</option>
+              <option>260</option><option>265</option><option>270</option>
+              <option>275</option><option>280</option><option>285</option>
+              <option>290</option><option>295</option><option>300</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">선호 컬러</label>
+            <div class="color-options">
+              <div class="color-option">
+                <input type="radio" name="p3_color" id="p3_gray" value="그레이">
+                <label for="p3_gray">
+                  <span class="color-swatch color-swatch--gray"></span>
+                  <span class="color-info">
+                    <span class="color-name">그레이</span>
+                    <span class="color-avail color-avail--now">즉시 가능</span>
+                  </span>
+                </label>
+              </div>
+              <div class="color-option">
+                <input type="radio" name="p3_color" id="p3_black" value="블랙">
+                <label for="p3_black">
+                  <span class="color-swatch color-swatch--black"></span>
+                  <span class="color-info">
+                    <span class="color-name">블랙</span>
+                    <span class="color-avail color-avail--later">10/13~ 가능</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Trial Schedule ══ -->
+<section class="form-section">
+  <div class="container fade-up">
+    <p class="section-eyebrow">트라이얼 일정</p>
+    <h2 class="section-title">트라이얼 희망 주차</h2>
+    <p class="section-desc">지점에서 회원 체험을 운영할 희망 주차를 선택해 주세요. 1주일 단위로 체험 세트가 지점별로 로테이션됩니다.</p>
+
+    <div class="week-calendar">
+      <div class="week-option">
+        <input type="radio" name="trial_week" id="week1" value="2026-W42" required>
+        <label for="week1">
+          <div>
+            <div class="week-label">1주차</div>
+            <div class="week-dates">10/12 (월) ~ 10/16 (금)</div>
+          </div>
+          <span class="week-badge week-badge--available">신청 가능</span>
+        </label>
+      </div>
+      <div class="week-option">
+        <input type="radio" name="trial_week" id="week2" value="2026-W43">
+        <label for="week2">
+          <div>
+            <div class="week-label">2주차</div>
+            <div class="week-dates">10/19 (월) ~ 10/23 (금)</div>
+          </div>
+          <span class="week-badge week-badge--available">신청 가능</span>
+        </label>
+      </div>
+      <div class="week-option">
+        <input type="radio" name="trial_week" id="week3" value="2026-W44">
+        <label for="week3">
+          <div>
+            <div class="week-label">3주차</div>
+            <div class="week-dates">10/26 (월) ~ 10/30 (금)</div>
+          </div>
+          <span class="week-badge week-badge--available">신청 가능</span>
+        </label>
+      </div>
+      <div class="week-option">
+        <input type="radio" name="trial_week" id="week4" value="2026-W45">
+        <label for="week4">
+          <div>
+            <div class="week-label">4주차</div>
+            <div class="week-dates">11/2 (월) ~ 11/6 (금)</div>
+          </div>
+          <span class="week-badge week-badge--available">신청 가능</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-hint" style="margin-top:12px">
+      * 블랙 컬러 선택 시 1주차(10/12~)부터 배정 가능합니다.<br>
+      * 그레이 컬러는 즉시 배정 가능합니다.
+    </div>
+
+    <!-- Gray Model Acceptance Check -->
+    <div class="gray-check" style="margin-top:20px">
+      <input type="checkbox" id="grayOk">
+      <div class="gray-check-text">
+        <div class="gray-check-title">기존 그레이 모델도 괜찮습니다</div>
+        <div class="gray-check-desc">블랙이 아닌 기존 그레이(Core Gray) 모델로도 체험/출전 가능합니다. 체크 시 배정이 더 빠를 수 있습니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ Submit ══ -->
+<section class="submit-section">
+  <div class="container">
+    <button type="submit" class="btn-submit" id="submitBtn">
+      캠페인 신청하기
+    </button>
+    <p class="submit-note">
+      접수 후 DARIMATI 팀에서 확인 연락을 드립니다.<br>
+      문의: support@darimati.us
+    </p>
+  </div>
+</section>
+</form>
+
+<!-- ══ Success Modal ══ -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-card">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+    <div class="success-title">신청 완료!</div>
+    <div class="success-desc">
+      캠페인 신청이 접수되었습니다.<br>
+      DARIMATI 팀에서 확인 후 연락드리겠습니다.
+    </div>
+    <button class="btn-close" onclick="closeSuccess()">확인</button>
+  </div>
+</div>
+
+<!-- ══ Footer ══ -->
+<footer class="footer">
+  <div class="container">
+    <p><strong style="color:rgba(255,255,255,0.7)">DARIMATI</strong> &mdash; Seoul, South Korea</p>
+    <p style="margin-top:4px">
+      darimati.us &nbsp;|&nbsp; @darimati_us &nbsp;|&nbsp; support@darimati.us
+    </p>
+    <p style="margin-top:8px;color:rgba(255,255,255,0.2)">
+      &copy; 2026 DARIMATI Inc. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+
+  // ── Toggle participant cards ──
+  window.toggleParticipant = function(n){
+    const body = document.getElementById('p'+n+'_body');
+    const btn = body.previousElementSibling.querySelector('.participant-toggle');
+    if(body.style.display === 'none'){
+      body.style.display = 'grid';
+      btn.textContent = '접기';
+    } else {
+      body.style.display = 'none';
+      btn.textContent = '펼치기';
+    }
+  };
+
+  // ── Form submission ──
+  document.getElementById('campaignForm').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const form = this;
+    const data = {
+      studio: {
+        name: form.querySelector('#studioName').value,
+        manager: form.querySelector('#managerName').value,
+        phone: form.querySelector('#managerPhone').value,
+        email: form.querySelector('#managerEmail').value,
+      },
+      participants: [],
+      trial_week: form.querySelector('input[name="trial_week"]:checked')?.value || '',
+      gray_ok: form.querySelector('#grayOk').checked,
+      submitted_at: new Date().toISOString()
+    };
+
+    // Collect participants
+    for(let i = 1; i <= 3; i++){
+      const name = form.querySelector('[name="p'+i+'_name"]').value;
+      if(!name) continue;
+      data.participants.push({
+        name: name,
+        phone: form.querySelector('[name="p'+i+'_phone"]').value,
+        size: form.querySelector('[name="p'+i+'_size"]').value,
+        color: form.querySelector('input[name="p'+i+'_color"]:checked')?.value || ''
+      });
+    }
+
+    // Validation
+    if(!data.studio.name || !data.studio.manager || !data.studio.phone){
+      alert('F45 지점 정보를 모두 입력해 주세요.');
+      return;
+    }
+    if(data.participants.length === 0){
+      alert('최소 1명의 출전 선수 정보를 입력해 주세요.');
+      return;
+    }
+    if(!data.trial_week){
+      alert('트라이얼 희망 주차를 선택해 주세요.');
+      return;
+    }
+
+    // Save to localStorage (draft mode)
+    const submissions = JSON.parse(localStorage.getItem('darimati_hyrox_submissions') || '[]');
+    submissions.push(data);
+    localStorage.setItem('darimati_hyrox_submissions', JSON.stringify(submissions));
+
+    console.log('[DARIMATI-HYROX] Submission:', JSON.stringify(data, null, 2));
+
+    // Show success
+    document.getElementById('successOverlay').classList.add('active');
+  });
+
+  window.closeSuccess = function(){
+    document.getElementById('successOverlay').classList.remove('active');
+  };
+
+  // ── Scroll reveal ──
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if(fadeEls.length){
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    fadeEls.forEach(function(el){ observer.observe(el); });
+  }
+
+})();
+</script>
+
+</body>
+</html>
