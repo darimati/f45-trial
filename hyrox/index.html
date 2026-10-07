@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DARIMATI × F45 HYROX — 출전 회원 신발 지원 &amp; 지점 체험</title>
+<meta name="description" content="HYROX 출전을 준비하는 F45 회원을 위한 캠페인. BR-001 신발 지원, 포디움 리워드, 1주일 지점 체험.">
+<meta property="og:title" content="DARIMATI × F45 HYROX Ready">
+<meta property="og:description" content="대회 전, 직접 신어보고 준비하세요. F45 지점당 최대 3명 신발 지원.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.darimati.us/cdn/shop/t/4/assets/dm-pre-main-cut.webp?v=19841062237378604151789539291">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  --ink:#121212;
+  --paper:#ffffff;
+  --sand:#e9e2d4;
+  --oyster:#b9bab5;
+  --mute:#6f6c66;
+  --line:#dcd8cf;
+  --field:#f6f4ef;
+  --ok:#1f6b46;
+  --warn:#9a4a12;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding-inline:20px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--display);font-stretch:110%;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+
+.hero{background:var(--ink);color:var(--paper)}
+.hero .bar{display:flex;justify-content:space-between;align-items:center;padding-block:18px}
+.hero .lockup{display:flex;align-items:flex-end;gap:8px;color:var(--paper)}
+.hero .lockup svg{display:block;height:auto}
+.hero .tag{font-family:var(--display);font-stretch:110%;font-size:11px;letter-spacing:.2em;color:var(--oyster)}
+.hero .photo{position:relative;margin-inline:-20px}
+.hero .photo img{display:block;width:100%;aspect-ratio:1/0.82;object-fit:cover;object-position:center 60%}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,18,18,0) 45%,rgba(18,18,18,.96) 100%)}
+.hero .head{position:relative;margin-top:-118px;padding-bottom:30px}
+.hero .x{font-family:var(--display);font-stretch:120%;font-weight:800;font-size:13px;letter-spacing:.24em;color:var(--sand)}
+.hero h1{font-family:var(--display);font-stretch:68%;font-weight:800;font-size:clamp(52px,15vw,84px);line-height:.9;letter-spacing:-.01em;margin-top:10px;text-transform:uppercase}
+.hero h1 span{display:block;font-family:var(--body);font-stretch:normal;font-size:clamp(20px,5.4vw,26px);font-weight:700;letter-spacing:-.02em;line-height:1.35;margin-top:14px;text-transform:none}
+.hero .lead{color:#d8d6d0;margin-top:18px;font-size:15px}
+.hero .proof{margin-top:20px;border-top:1px solid #3a3a38;padding-top:14px;font-size:13px;color:var(--oyster)}
+.hero .proof b{color:var(--paper);font-weight:500}
+
+section{padding-block:40px}
+.offer h2,.sec h2{font-size:22px;font-weight:900;letter-spacing:-.02em;margin-top:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.cell{border:1.5px solid var(--ink);padding:16px 14px;min-width:0}
+.cell.k{background:var(--ink);color:var(--paper)}
+.cell .no{font-family:var(--display);font-stretch:110%;font-size:11px;letter-spacing:.2em;opacity:.6}
+.cell .big{font-family:var(--display);font-stretch:70%;font-weight:800;font-size:40px;line-height:1;margin-top:8px;font-variant-numeric:tabular-nums}
+.cell .big small{font-family:var(--body);font-size:14px;font-weight:700;margin-left:2px}
+.cell h3{font-size:14.5px;font-weight:700;margin-top:8px;line-height:1.4}
+.cell p{font-size:12.5px;margin:4px 0 0;opacity:.75;line-height:1.5}
+.note{font-size:12.5px;color:var(--mute);margin-top:12px}
+
+.steps{display:flex;gap:6px;margin-top:22px}
+.steps a{flex:1;text-align:center;text-decoration:none;color:var(--ink);background:var(--field);padding:12px 6px;font-size:13px;font-weight:700;line-height:1.35}
+.steps a small{display:block;font-family:var(--display);font-stretch:110%;font-weight:500;font-size:10px;letter-spacing:.18em;color:var(--mute)}
+
+.sec{border-top:6px solid var(--sand)}
+.sec .desc{color:var(--mute);font-size:14px;margin-top:6px}
+.field{display:flex;flex-direction:column;gap:6px;margin-top:16px;min-width:0}
+.field label,.lbl{font-size:13px;font-weight:700}
+.field .req{color:var(--warn);font-weight:500}
+input[type=text],input[type=tel],input[type=email],select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:0;padding:12px 12px;width:100%;min-width:0;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 13px) 52%;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
+input:focus,select:focus,textarea:focus,button:focus-visible,.week:focus-within{outline:2px solid var(--ink);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row2 .field{margin-top:12px}
+
+.athlete{border:1px solid var(--line);padding:16px;margin-top:14px;background:var(--paper)}
+.athlete .ah{display:flex;justify-content:space-between;align-items:center}
+.athlete .ah b{font-family:var(--display);font-stretch:110%;font-size:12px;letter-spacing:.2em}
+.athlete .rm{background:none;border:0;color:var(--mute);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer;padding:4px}
+.add{margin-top:12px;width:100%;background:var(--paper);border:1.5px dashed var(--ink);padding:13px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;color:var(--ink)}
+.add[disabled]{opacity:.35;cursor:default}
+
+.model{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.opt{position:relative;border:1.5px solid var(--line);padding:14px 28px 12px 12px;cursor:pointer;display:block;min-width:0}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt .sw{display:inline-block;width:14px;height:14px;border-radius:50%;vertical-align:-2px;margin-right:6px;border:1px solid #888}
+.opt b{font-size:14px}
+.opt span.s{display:block;font-size:12px;color:var(--mute);margin-top:2px;line-height:1.45}
+.opt:has(input:checked){border-color:var(--ink);background:var(--field)}
+.opt:has(input:checked)::after{content:"✓";position:absolute;right:10px;top:8px;font-weight:900}
+.cal{margin-top:12px;display:grid;grid-template-columns:1fr;gap:6px}
+.week{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;border:1px solid var(--line);padding:12px 14px;cursor:pointer;background:var(--paper)}
+.week .wn{font-family:var(--display);font-stretch:80%;font-weight:800;font-size:20px;line-height:1;min-width:46px;font-variant-numeric:tabular-nums}
+.week .wd{font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.week .wd small{display:block;font-size:12px;color:var(--mute);font-weight:400}
+.week .pick{font-size:12px;font-weight:700;min-width:44px;text-align:right}
+.week.sel1{border:2px solid var(--ink);background:var(--field)}
+.week.sel2{border:2px dashed var(--ink)}
+.week.off{opacity:.38;cursor:not-allowed}
+.chip{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.chip.b{background:var(--ink);color:var(--paper)}
+.chip.g{background:var(--oyster);color:var(--ink)}
+.calhint{font-size:12.5px;color:var(--mute);margin-top:10px}
+
+.consent b{color:var(--ink);font-weight:700}
+.consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:13px;color:var(--mute);line-height:1.5}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--ink);flex:none}
+.submit{margin-top:18px;width:100%;background:var(--ink);color:var(--paper);border:0;padding:17px;font:inherit;font-size:16px;font-weight:700;cursor:pointer}
+.submit:disabled{opacity:.5;cursor:wait}
+.msg{margin-top:12px;font-size:14px;padding:12px 14px;display:block}
+.msg.err{background:#f8ece4;color:var(--warn)}
+.msg.ok{background:#e6f0ea;color:var(--ok)}
+
+footer{background:var(--ink);color:var(--oyster);font-size:12px;line-height:1.8;padding-block:28px}
+footer b{color:var(--paper);font-weight:500}
+footer .sel{user-select:all;color:var(--paper)}
+@media (max-width:380px){.grid{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="bar">
+      <div class="lockup" aria-label="DARIMATI"><svg aria-hidden="true" width="29.0" height="26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008 904"><path fill="currentColor" fill-rule="evenodd" d="M672.7,903.3C672.3,903.0 672.0,901.6 672.0,900.4L672.0,898.0L669.2,896.3C667.7,895.4 664.9,893.0 662.9,891.0C660.9,889.1 658.6,886.9 657.7,886.2L656.0,884.9L656.0,879.5L656.0,874.1L653.8,872.9C652.5,872.3 649.7,869.9 647.4,867.6C645.2,865.4 642.6,862.9 641.7,862.2L640.0,860.9L640.0,855.5L640.0,850.1L637.8,848.9C636.5,848.3 633.7,845.9 631.4,843.6C629.2,841.4 626.6,838.9 625.7,838.2L624.0,836.9L624.0,831.5L624.0,826.1L621.8,824.9C620.5,824.3 617.7,821.9 615.4,819.6C613.2,817.4 610.6,814.9 609.7,814.2L608.0,812.9L608.0,807.5L608.0,802.1L605.8,800.9C604.5,800.3 601.7,797.9 599.4,795.6C597.2,793.4 594.6,790.9 593.7,790.2L592.0,788.9L592.0,783.5L592.0,778.1L589.8,776.9C588.5,776.3 585.7,773.9 583.4,771.6C581.2,769.4 578.6,766.9 577.7,766.2L576.0,764.9L576.0,759.5L576.0,754.1L573.8,752.9C572.5,752.3 569.7,749.9 567.4,747.6C565.2,745.4 562.6,742.9 561.7,742.2L560.0,740.9L560.0,735.5L560.0,730.1L558.1,729.0L556.1,728.0L278.1,728.0L0.0,728.0L0.0,632.0L0.0,536.0L206.4,536.0L412.9,536.0L414.4,534.4L416.0,532.9L416.0,524.0L416.0,515.1L414.4,513.8C413.5,513.1 410.6,510.5 408.0,508.0C405.4,505.5 402.5,502.9 401.6,502.2L400.0,500.9L400.0,495.5L400.0,490.1L397.8,488.9C396.5,488.3 393.7,485.9 391.4,483.6C389.2,481.4 386.6,478.9 385.7,478.2L384.0,476.9L384.0,471.5L384.0,466.1L381.8,464.9C380.5,464.3 377.7,461.9 375.4,459.6C373.2,457.4 370.6,454.9 369.7,454.2L368.0,452.9L368.0,447.5L368.0,442.1L365.8,440.9C364.5,440.3 361.7,437.9 359.4,435.6C357.2,433.4 354.6,430.9 353.7,430.2L352.0,428.9L352.0,423.5L352.0,418.1L349.8,416.9C348.5,416.3 345.7,413.9 343.4,411.6C341.2,409.4 338.6,406.9 337.7,406.2L336.0,404.9L336.0,399.5L336.0,394.1L333.8,392.9C332.5,392.3 328.1,388.2 323.9,383.9L316.3,376.0L158.2,376.0L0.0,376.0L0.0,280.0L0.0,184.0L89.9,184.0C139.4,184.0 180.5,183.7 181.4,183.4C182.2,183.1 183.4,181.3 184.0,179.4L185.2,176.0L184.1,172.7L183.0,169.3L179.7,167.9L176.5,166.5L176.2,160.3L175.9,154.0L173.7,152.9C172.5,152.3 169.7,149.9 167.4,147.6C165.2,145.4 162.6,142.9 161.7,142.2L160.0,140.9L160.0,135.5L160.0,130.1L157.7,128.9C156.5,128.3 153.7,125.9 151.4,123.6C149.2,121.4 146.6,118.9 145.7,118.2L144.0,116.9L144.0,111.5L144.0,106.1L141.8,104.9C140.5,104.3 137.7,101.9 135.4,99.6C133.2,97.4 130.6,94.9 129.7,94.2L128.0,92.9L128.0,87.5L128.0,82.1L125.8,80.9C124.5,80.3 121.7,77.9 119.4,75.6C117.2,73.4 114.6,70.9 113.7,70.2L112.0,68.9L112.0,63.5L112.0,58.1L109.8,56.9C108.5,56.3 105.7,53.9 103.4,51.6C101.2,49.4 98.6,46.9 97.7,46.2L96.0,44.9L96.0,39.5L96.0,34.1L93.8,32.9C92.5,32.3 89.7,29.9 87.4,27.6C85.2,25.4 82.6,22.9 81.7,22.2L80.0,20.9L80.0,16.1L80.0,11.3L78.3,9.8C77.3,9.0 75.7,8.0 74.8,7.7C73.9,7.4 72.7,5.6 72.2,3.8L71.4,0.5L182.4,0.2C243.5,0.1 294.1,0.2 294.8,0.5C295.4,0.7 296.0,2.1 296.0,3.4L296.0,6.0L298.8,7.7C300.3,8.6 303.1,11.0 305.1,13.0C307.1,14.9 309.4,17.1 310.3,17.8L312.0,19.1L312.0,24.5L312.0,29.9L314.2,31.1C315.5,31.7 318.3,34.1 320.6,36.4C322.8,38.6 325.4,41.1 326.3,41.8L328.0,43.1L328.0,48.5L328.0,53.9L330.2,55.1C331.5,55.7 334.3,58.1 336.6,60.4C338.8,62.6 341.4,65.1 342.3,65.8L344.0,67.1L344.0,72.5L344.0,77.9L346.2,79.1C347.5,79.7 350.3,82.1 352.6,84.4C354.8,86.6 357.4,89.1 358.3,89.8L360.0,91.1L360.0,96.5L360.0,101.9L362.2,103.1C363.5,103.7 366.3,106.1 368.6,108.4C370.8,110.6 373.4,113.1 374.3,113.8L376.0,115.1L376.0,120.5L376.0,125.9L378.2,127.1C379.5,127.7 382.3,130.1 384.6,132.4C386.8,134.6 389.4,137.1 390.3,137.8L392.0,139.1L392.0,144.5L392.0,149.9L394.2,151.1C395.5,151.7 398.3,154.1 400.6,156.4C402.8,158.6 405.4,161.1 406.3,161.8L408.0,163.1L408.0,168.5L408.0,173.9L410.8,175.4C412.4,176.2 414.9,178.5 416.4,180.4L419.1,184.0L713.6,184.0L1008.0,184.0L1008.0,280.0L1008.0,376.0L782.1,376.0C657.8,376.0 555.5,376.3 554.6,376.6C553.8,376.9 552.6,378.7 552.0,380.6L550.8,384.0L552.0,387.5C552.6,389.4 553.6,391.0 554.2,391.0C554.7,391.0 557.3,393.1 560.0,395.8C562.6,398.4 565.5,401.1 566.4,401.8L568.0,403.1L568.0,408.5L568.0,413.9L570.2,415.1C571.5,415.7 574.3,418.1 576.6,420.4C578.8,422.6 581.4,425.1 582.3,425.8L584.0,427.1L584.0,432.5L584.0,437.9L586.2,439.1C587.5,439.7 590.3,442.1 592.6,444.4C594.8,446.6 597.4,449.1 598.3,449.8L600.0,451.1L600.0,456.5L600.0,461.9L602.2,463.1C603.5,463.7 606.3,466.1 608.6,468.4C610.8,470.6 613.4,473.1 614.3,473.8L616.0,475.1L616.0,480.5L616.0,485.9L618.2,487.1C619.5,487.7 622.3,490.1 624.6,492.4C626.8,494.6 629.4,497.1 630.3,497.8L632.0,499.1L632.0,504.5L632.0,509.9L634.2,511.1C635.5,511.7 638.3,514.1 640.6,516.4C642.8,518.6 645.4,521.1 646.3,521.8L648.0,523.1L648.0,528.5L648.0,533.9L649.9,535.0L651.9,536.0L829.9,536.0L1008.0,536.0L1008.0,632.0L1008.0,728.0L896.8,728.0L785.7,727.9L784.9,729.2C782.9,732.3 784.1,735.0 788.5,737.1L791.5,738.5L791.8,744.3L792.1,750.0L794.3,751.1C795.5,751.7 798.3,754.1 800.6,756.4C802.8,758.6 805.4,761.1 806.3,761.8L808.0,763.1L808.0,768.5L808.0,773.9L810.2,775.1C811.5,775.7 814.3,778.1 816.6,780.4C818.8,782.6 821.4,785.1 822.3,785.8L824.0,787.1L824.0,792.5L824.0,797.9L826.2,799.1C827.5,799.7 830.3,802.1 832.6,804.4C834.8,806.6 837.4,809.1 838.3,809.8L840.0,811.1L840.0,816.5L840.0,821.9L842.2,823.1C843.5,823.7 846.3,826.1 848.6,828.4C850.8,830.6 853.4,833.1 854.3,833.8L856.0,835.1L856.0,840.5L856.0,845.9L858.2,847.1C859.5,847.7 862.3,850.1 864.6,852.4C866.8,854.6 869.4,857.1 870.3,857.8L872.0,859.1L872.0,864.5L872.0,869.9L874.2,871.1C875.5,871.7 878.3,874.1 880.6,876.4C882.8,878.6 885.4,881.1 886.3,881.8L888.0,883.1L888.0,887.9L888.0,892.7L889.8,894.3C890.8,895.3 892.2,896.0 892.8,896.0C894.1,896.0 894.9,897.2 896.0,901.0L896.9,904.0L785.1,904.0C723.6,904.0 673.0,903.7 672.7,903.3Z"/></svg><svg aria-hidden="true" width="91.8" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 272"><path fill="currentColor" fill-rule="evenodd" d="M0.0,136.0L0.0,-0.0L91.8,0.2L183.5,0.5L183.8,3.2C184.3,7.4 186.1,8.2 195.5,8.1L204.0,8.0L210.3,14.4C213.7,17.9 217.1,21.5 217.8,22.4L219.1,24.0L223.7,24.0L228.4,24.0L232.6,28.2C234.8,30.6 237.4,33.1 238.3,33.8L240.0,35.1L240.0,40.5L240.0,45.9L242.2,47.1C243.5,47.7 246.3,50.1 248.6,52.4C250.8,54.6 253.4,57.1 254.3,57.8L256.0,59.1L256.0,68.0L256.0,76.9L257.6,78.4C258.4,79.3 259.5,80.0 260.0,80.0C260.5,80.0 261.6,80.7 262.4,81.6L264.0,83.1L264.0,128.0L264.0,172.9L262.4,174.4C261.6,175.3 260.5,176.0 260.0,176.0C259.5,176.0 258.4,176.7 257.6,177.6L256.0,179.1L256.0,187.8C256.0,192.6 255.6,197.0 255.2,197.6C254.8,198.2 253.0,199.5 251.2,200.4L248.0,202.1L248.0,207.3C248.0,213.4 247.6,214.2 243.2,216.4L240.0,218.1L240.0,223.5L240.0,228.9L238.4,230.2C237.5,230.9 233.0,235.2 228.5,239.8L220.3,248.0L215.7,248.0L211.1,248.0L209.8,249.6C209.1,250.5 205.7,254.1 202.3,257.6L196.0,264.0L187.5,263.9C178.1,263.8 176.3,264.6 175.8,268.8L175.5,271.5L87.8,271.8L0.0,272.0L0.0,136.0ZM256.0,265.6L256.0,259.1L257.6,257.6C258.4,256.7 259.8,256.0 260.5,256.0C263.0,256.0 264.0,252.4 264.0,243.6L264.0,235.1L265.6,233.6C266.4,232.7 267.5,232.0 268.0,232.0C268.5,232.0 269.6,231.3 270.4,230.4L272.0,228.9L272.0,220.0L272.0,211.1L273.6,209.6C274.4,208.7 275.5,208.0 276.0,208.0C276.5,208.0 277.6,207.3 278.4,206.4L280.0,204.9L280.0,196.0L280.0,187.1L281.6,185.6C282.4,184.7 283.5,184.0 284.0,184.0C284.5,184.0 285.6,183.3 286.4,182.4L288.0,180.9L288.0,168.0L288.0,155.1L289.6,153.6C290.4,152.7 291.5,152.0 292.0,152.0C292.5,152.0 293.6,151.3 294.4,150.4L296.0,148.9L296.0,140.0L296.0,131.1L297.6,129.6C298.4,128.7 299.5,128.0 300.0,128.0C300.5,128.0 301.6,127.3 302.4,126.4L304.0,124.9L304.0,116.0L304.0,107.1L305.6,105.6C306.4,104.7 307.5,104.0 308.0,104.0C308.5,104.0 309.6,103.3 310.4,102.4L312.0,100.9L312.0,92.0L312.0,83.1L313.6,81.6C314.4,80.7 315.5,80.0 316.0,80.0C316.5,80.0 317.6,79.3 318.4,78.4L320.0,76.9L320.0,68.0L320.0,59.1L321.6,57.6C322.4,56.7 323.5,56.0 324.0,56.0C324.5,56.0 325.6,55.3 326.4,54.4L328.0,52.9L328.0,44.0L328.0,35.1L329.6,33.6C330.4,32.7 331.5,32.0 332.0,32.0C332.5,32.0 333.6,31.3 334.4,30.4L336.0,28.9L336.0,19.9L336.0,11.0L339.9,8.5L343.9,6.1L344.2,3.3L344.5,0.5L404.2,0.2L464.0,-0.0L464.0,6.4L464.0,12.9L465.6,14.4C466.4,15.3 467.5,16.0 468.0,16.0C468.5,16.0 469.6,16.7 470.4,17.6L472.0,19.1L472.0,32.0L472.0,44.9L473.6,46.4C474.4,47.3 475.5,48.0 476.0,48.0C476.5,48.0 477.6,48.7 478.4,49.6L480.0,51.1L480.0,60.0L480.0,68.9L481.6,70.4C482.4,71.3 483.5,72.0 484.0,72.0C484.5,72.0 485.6,72.7 486.4,73.6L488.0,75.1L488.0,84.0L488.0,92.9L489.6,94.4C490.4,95.3 491.5,96.0 492.0,96.0C492.5,96.0 493.6,96.7 494.4,97.6L496.0,99.1L496.0,108.0L496.0,116.9L497.6,118.4C498.4,119.3 499.5,120.0 500.0,120.0C500.5,120.0 501.6,120.7 502.4,121.6L504.0,123.1L504.0,132.0L504.0,140.9L505.6,142.4C506.4,143.3 507.5,144.0 508.0,144.0C508.5,144.0 509.6,144.7 510.4,145.6L512.0,147.1L512.0,156.0L512.0,164.9L513.6,166.4C514.4,167.3 515.5,168.0 516.0,168.0C516.5,168.0 517.6,168.7 518.4,169.6L520.0,171.1L520.0,180.0L520.0,188.9L521.6,190.4C522.4,191.3 523.5,192.0 524.0,192.0C524.5,192.0 525.6,192.7 526.4,193.6L528.0,195.1L528.0,204.0L528.0,212.9L529.6,214.4C530.4,215.3 531.5,216.0 532.0,216.0C532.5,216.0 533.6,216.7 534.4,217.6L536.0,219.1L536.0,227.8C536.0,232.6 536.4,237.0 536.8,237.6C537.2,238.2 539.0,239.5 540.8,240.4L544.0,242.1L544.1,244.3C544.2,245.5 544.2,249.6 544.0,253.4L543.8,260.3L547.4,263.4C549.3,265.1 551.2,267.7 551.6,269.2L552.2,272.0L504.1,272.0L456.0,272.0L456.0,261.6L456.0,251.1L454.4,249.6C453.6,248.7 452.5,248.0 452.0,248.0C451.5,248.0 450.4,247.3 449.6,246.4L448.0,244.9L448.0,236.0L448.0,227.1L446.4,225.6L444.9,224.0L400.0,224.0L355.1,224.0L353.6,225.6L352.0,227.1L352.0,236.0L352.0,244.9L350.4,246.4C349.6,247.3 348.5,248.0 348.0,248.0C347.5,248.0 346.4,248.7 345.6,249.6L344.0,251.1L344.0,261.6L344.0,272.0L300.0,272.0L256.0,272.0L256.0,265.6ZM560.6,267.4C560.3,264.8 560.0,203.6 560.0,131.4L560.0,-0.0L651.8,0.2L743.5,0.5L743.8,3.0C744.4,7.0 745.9,8.0 751.2,8.0L756.2,8.0L759.9,12.0L763.5,16.0L768.2,16.0L772.9,16.0L774.2,17.6C775.9,19.7 788.3,32.1 790.4,33.8L792.0,35.1L792.0,40.5L792.0,45.9L795.2,47.6C797.0,48.5 798.8,49.8 799.2,50.4C799.6,51.0 800.0,57.2 800.0,64.2L800.0,76.9L801.6,78.4C802.4,79.3 803.5,80.0 804.0,80.0C804.5,80.0 805.6,80.7 806.4,81.6L808.0,83.1L808.0,96.0L808.0,108.9L806.4,110.4C805.6,111.3 804.5,112.0 804.0,112.0C803.5,112.0 802.4,112.7 801.6,113.6L800.0,115.1L800.0,123.8C800.0,128.6 799.6,133.0 799.2,133.6C798.8,134.2 797.0,135.5 795.2,136.4L792.0,138.1L792.0,143.5L792.0,148.9L790.4,150.2C789.5,150.9 783.5,156.8 777.0,163.2C770.4,169.7 764.7,175.0 764.2,175.0C763.7,175.0 762.5,175.9 761.5,177.0L759.8,178.9L760.4,181.3C760.7,182.6 762.3,184.2 764.2,185.1L767.5,186.5L767.8,192.2L768.1,198.0L770.3,199.1C771.5,199.7 774.3,202.1 776.6,204.4C778.8,206.6 781.4,209.1 782.3,209.8L784.0,211.1L784.0,216.5L784.0,221.9L786.2,223.1C787.5,223.7 790.3,226.1 792.6,228.4C794.8,230.6 797.4,233.1 798.3,233.8L800.0,235.1L800.0,240.5L800.0,245.9L802.2,247.1C803.5,247.8 807.9,251.7 812.1,255.9C816.3,260.1 820.7,264.2 821.8,265.0C822.9,265.8 824.1,267.7 824.4,269.3L825.0,272.0L772.8,271.8L720.5,271.5L720.2,268.7L719.9,265.9L715.9,263.5L712.0,261.0L712.0,255.5L712.0,250.1L708.8,248.4C704.4,246.2 704.0,245.4 704.0,239.3L704.0,234.1L700.8,232.4C696.4,230.2 696.0,229.4 696.0,223.3L696.0,218.1L693.8,216.9C692.5,216.3 689.7,213.9 687.4,211.6C685.2,209.4 682.6,206.9 681.7,206.2L680.0,204.9L680.0,199.5L680.0,194.1L678.1,193.0C677.0,192.5 670.5,192.0 663.6,192.0L651.1,192.0L649.6,193.6L648.0,195.1L648.0,233.6L648.0,272.0L604.6,272.0L561.3,272.0L560.6,267.4ZM840.0,136.0L840.0,0.0L880.0,0.0L920.0,0.0L920.0,136.0L920.0,272.0L880.0,272.0L840.0,272.0L840.0,136.0ZM960.0,136.0L960.0,0.0L1028.0,0.0L1096.0,0.0L1096.0,6.4L1096.0,12.9L1097.6,14.4C1098.4,15.3 1099.5,16.0 1100.0,16.0C1100.5,16.0 1101.6,16.7 1102.4,17.6L1104.0,19.1L1104.0,32.0L1104.0,44.9L1105.6,46.4C1106.4,47.3 1107.5,48.0 1108.0,48.0C1108.5,48.0 1109.6,48.7 1110.4,49.6L1112.0,51.1L1112.0,64.0L1112.0,76.9L1113.6,78.4C1114.4,79.3 1115.5,80.0 1116.0,80.0C1116.5,80.0 1117.6,80.7 1118.4,81.6L1120.0,83.1L1120.0,96.0L1120.0,108.9L1121.6,110.4C1122.4,111.3 1123.5,112.0 1124.0,112.0C1124.5,112.0 1125.6,112.7 1126.4,113.6L1128.0,115.1L1128.0,127.8C1128.0,134.8 1128.4,141.0 1128.8,141.6C1129.2,142.2 1131.0,143.5 1132.8,144.4L1136.2,146.1L1135.5,155.4L1134.8,164.6L1136.5,166.3C1138.6,168.4 1141.4,168.5 1143.4,166.4L1145.0,164.9L1145.0,159.5L1145.0,154.2L1148.5,151.6L1152.0,148.9L1152.0,132.0L1152.0,115.1L1153.6,113.6C1154.4,112.7 1155.5,112.0 1156.0,112.0C1156.5,112.0 1157.6,111.3 1158.4,110.4L1160.0,108.9L1160.0,96.0L1160.0,83.1L1161.6,81.6C1162.4,80.7 1163.5,80.0 1164.0,80.0C1164.5,80.0 1165.6,79.3 1166.4,78.4L1168.0,76.9L1168.0,64.0L1168.0,51.1L1169.6,49.6C1170.4,48.7 1171.5,48.0 1172.0,48.0C1172.5,48.0 1173.6,47.3 1174.4,46.4L1176.0,44.9L1176.0,32.0L1176.0,19.1L1177.6,17.6C1178.4,16.7 1179.5,16.0 1180.0,16.0C1180.5,16.0 1181.6,15.3 1182.4,14.4L1184.0,12.9L1184.0,6.4L1184.0,0.0L1248.0,0.0L1312.0,0.0L1312.0,136.0L1312.0,272.0L1268.0,272.0L1223.9,272.0L1224.2,189.4L1224.5,106.8L1226.8,105.0C1228.0,104.0 1229.6,103.0 1230.3,102.7L1231.5,102.3L1232.1,88.9C1232.9,74.4 1232.3,72.0 1228.5,72.0L1226.0,72.0L1223.6,75.9C1222.2,78.1 1220.2,80.1 1219.0,80.5C1216.3,81.3 1216.1,82.8 1215.7,101.4L1215.3,117.3L1212.9,119.2C1211.6,120.2 1209.9,121.5 1209.2,122.1L1207.8,123.3L1208.0,130.4C1208.2,134.3 1208.2,138.5 1208.1,139.7L1208.0,141.9L1204.8,143.6C1203.0,144.5 1201.2,145.8 1200.8,146.4C1200.4,147.0 1200.0,153.2 1200.0,160.2L1200.0,172.9L1198.4,174.4C1197.6,175.3 1196.5,176.0 1196.0,176.0C1195.5,176.0 1194.4,176.7 1193.6,177.6L1192.0,179.1L1192.0,188.0L1192.0,196.9L1190.4,198.4C1189.6,199.3 1188.5,200.0 1188.0,200.0C1187.5,200.0 1186.4,200.7 1185.6,201.6L1184.0,203.1L1184.0,216.0L1184.0,228.9L1182.4,230.4C1181.6,231.3 1180.5,232.0 1180.0,232.0C1179.5,232.0 1178.4,232.7 1177.6,233.6L1176.0,235.1L1176.0,244.0L1176.0,252.9L1174.4,254.2C1173.5,254.9 1170.8,257.4 1168.4,259.7L1164.1,263.9L1132.0,263.9L1099.9,263.9L1095.6,259.7C1093.2,257.4 1090.5,254.9 1089.6,254.2L1088.0,252.9L1088.0,240.0L1088.0,227.1L1086.4,225.6C1085.6,224.7 1084.5,224.0 1084.0,224.0C1083.5,224.0 1082.4,223.3 1081.6,222.4L1080.0,220.9L1080.0,212.0L1080.0,203.1L1078.4,201.6C1077.6,200.7 1076.5,200.0 1076.0,200.0C1075.5,200.0 1074.4,199.3 1073.6,198.4L1072.0,196.9L1072.0,184.0L1072.0,171.1L1070.4,169.6C1069.6,168.7 1068.5,168.0 1068.0,168.0C1067.5,168.0 1066.4,167.3 1065.6,166.4L1064.0,164.9L1064.0,156.2C1064.0,151.4 1063.6,147.0 1063.2,146.4C1062.8,145.8 1061.0,144.5 1059.2,143.6L1056.0,141.9L1056.0,128.5L1056.0,115.1L1054.8,114.0C1054.1,113.5 1052.4,112.1 1051.0,111.1L1048.5,109.2L1048.8,92.3L1049.2,75.3L1047.5,73.6C1045.7,71.8 1043.2,71.6 1041.0,73.0L1039.5,73.9L1039.9,173.0L1040.2,272.0L1000.1,272.0L960.0,272.0L960.0,136.0ZM1328.0,257.0L1328.0,242.1L1331.2,240.4C1333.0,239.5 1334.8,238.2 1335.2,237.6C1335.6,237.0 1336.0,232.6 1336.0,227.8L1336.0,219.1L1337.6,217.6C1338.4,216.7 1339.5,216.0 1340.0,216.0C1340.5,216.0 1341.6,215.3 1342.4,214.4L1344.0,212.9L1344.0,204.0L1344.0,195.1L1345.6,193.6C1346.4,192.7 1347.5,192.0 1348.0,192.0C1348.5,192.0 1349.6,191.3 1350.4,190.4L1352.0,188.9L1352.0,180.0L1352.0,171.1L1353.6,169.6C1354.4,168.7 1355.5,168.0 1356.0,168.0C1356.5,168.0 1357.6,167.3 1358.4,166.4L1360.0,164.9L1360.0,156.0L1360.0,147.1L1361.6,145.6C1362.4,144.7 1363.5,144.0 1364.0,144.0C1364.5,144.0 1365.6,143.3 1366.4,142.4L1368.0,140.9L1368.0,132.0L1368.0,123.1L1369.6,121.6C1370.4,120.7 1371.5,120.0 1372.0,120.0C1372.5,120.0 1373.6,119.3 1374.4,118.4L1376.0,116.9L1376.0,108.0L1376.0,99.1L1377.6,97.6C1378.4,96.7 1379.5,96.0 1380.0,96.0C1380.5,96.0 1381.6,95.3 1382.4,94.4L1384.0,92.9L1384.0,84.0L1384.0,75.1L1385.6,73.6C1386.4,72.7 1387.5,72.0 1388.0,72.0C1388.5,72.0 1389.6,71.3 1390.4,70.4L1392.0,68.9L1392.0,60.0L1392.0,51.1L1393.6,49.6C1394.4,48.7 1395.5,48.0 1396.0,48.0C1396.5,48.0 1397.6,47.3 1398.4,46.4L1400.0,44.9L1400.0,36.0L1400.0,27.1L1401.6,25.6C1402.4,24.7 1403.5,24.0 1404.0,24.0C1404.5,24.0 1405.6,23.3 1406.4,22.4L1408.0,20.9L1408.0,10.4L1408.0,-0.0L1467.8,0.2L1527.5,0.5L1527.8,3.3L1528.1,6.1L1532.1,8.5L1536.0,11.0L1536.0,19.9L1536.0,28.9L1537.6,30.4C1538.4,31.3 1539.5,32.0 1540.0,32.0C1540.5,32.0 1541.6,32.7 1542.4,33.6L1544.0,35.1L1544.0,44.0L1544.0,52.9L1545.6,54.4C1546.4,55.3 1547.5,56.0 1548.0,56.0C1548.5,56.0 1549.6,56.7 1550.4,57.6L1552.0,59.1L1552.0,68.0L1552.0,76.9L1553.6,78.4C1554.4,79.3 1555.5,80.0 1556.0,80.0C1556.5,80.0 1557.6,80.7 1558.4,81.6L1560.0,83.1L1560.0,92.0L1560.0,100.9L1561.6,102.4C1562.4,103.3 1563.5,104.0 1564.0,104.0C1564.5,104.0 1565.6,104.7 1566.4,105.6L1568.0,107.1L1568.0,116.0L1568.0,124.9L1569.6,126.4C1570.4,127.3 1571.5,128.0 1572.0,128.0C1572.5,128.0 1573.6,128.7 1574.4,129.6L1576.0,131.1L1576.0,140.0L1576.0,148.9L1577.6,150.4C1578.4,151.3 1579.5,152.0 1580.0,152.0C1580.5,152.0 1581.6,152.7 1582.4,153.6L1584.0,155.1L1584.0,164.0L1584.0,172.9L1585.6,174.4C1586.4,175.3 1587.5,176.0 1588.0,176.0C1588.5,176.0 1589.6,176.7 1590.4,177.6L1592.0,179.1L1592.0,188.0L1592.0,196.9L1593.6,198.4C1594.4,199.3 1595.5,200.0 1596.0,200.0C1596.5,200.0 1597.6,200.7 1598.4,201.6L1600.0,203.1L1600.0,216.0L1600.0,228.9L1601.6,230.4C1602.4,231.3 1603.5,232.0 1604.0,232.0C1604.5,232.0 1605.6,232.7 1606.4,233.6L1608.0,235.1L1608.0,243.6C1608.0,252.4 1609.0,256.0 1611.5,256.0C1612.2,256.0 1613.6,256.7 1614.4,257.6L1616.0,259.1L1616.0,265.6L1616.0,272.0L1572.0,272.0L1528.0,272.0L1528.0,265.6L1528.0,259.1L1526.4,257.6C1525.6,256.7 1524.5,256.0 1524.0,256.0C1523.5,256.0 1522.4,255.3 1521.6,254.4L1520.0,252.9L1520.0,244.0L1520.0,235.1L1518.3,233.8C1517.4,233.1 1514.8,230.6 1512.6,228.2L1508.4,224.0L1468.0,224.0L1427.6,224.0L1423.4,228.2C1421.2,230.6 1418.6,233.1 1417.7,233.8L1416.0,235.1L1416.0,248.0L1416.0,261.0L1412.1,263.5L1408.1,265.9L1407.8,268.7L1407.5,271.5L1367.8,271.8L1328.0,272.0L1328.0,257.0ZM1656.0,173.6L1656.0,75.1L1654.4,73.6L1652.9,72.0L1620.0,72.0L1587.1,72.0L1585.6,70.4L1584.0,68.9L1584.0,34.4L1584.0,0.0L1700.0,0.0L1816.0,0.0L1816.0,34.4L1816.0,68.9L1814.4,70.4L1812.9,72.0L1780.0,72.0L1747.1,72.0L1745.6,73.6L1744.0,75.1L1744.0,173.6L1744.0,272.0L1700.0,272.0L1656.0,272.0L1656.0,173.6ZM1840.0,136.0L1840.0,0.0L1880.0,0.0L1920.0,0.0L1920.0,136.0L1920.0,272.0L1880.0,272.0L1840.0,272.0L1840.0,136.0ZM136.0,204.0L139.2,200.0L147.7,200.0L156.3,200.0L164.5,191.8C169.0,187.2 173.5,182.9 174.4,182.2L176.0,180.9L176.0,172.0L176.0,163.1L177.6,161.6C178.4,160.7 179.5,160.0 180.0,160.0C180.5,160.0 181.6,159.3 182.4,158.4L184.0,156.9L184.0,136.0L184.0,115.1L182.4,113.6C181.6,112.7 180.5,112.0 180.0,112.0C179.5,112.0 178.4,111.3 177.6,110.4L176.0,108.9L176.0,100.0L176.0,91.1L174.4,89.8C172.3,88.1 159.9,75.7 158.2,73.6L156.9,72.0L152.0,72.0L147.2,72.0L144.0,68.0L140.8,64.0L112.0,64.0L83.1,64.0L81.6,65.6L80.0,67.1L80.0,136.0L80.0,204.9L81.6,206.4L83.1,208.0L108.0,208.0L132.8,208.0L136.0,204.0ZM422.4,166.4L424.0,164.9L424.0,148.0L424.0,131.1L422.4,129.6C421.6,128.7 420.5,128.0 420.0,128.0C419.5,128.0 418.4,127.3 417.6,126.4L416.0,124.9L416.0,112.2C416.0,105.2 415.6,99.0 415.2,98.4C414.8,97.8 413.0,96.5 411.2,95.6L408.0,93.9L407.9,91.7C407.8,90.5 407.8,86.3 408.0,82.4L408.2,75.3L406.5,73.7L404.9,72.0L400.0,72.0L395.1,72.0L393.6,73.6L392.0,75.1L392.0,88.0L392.0,100.9L390.4,102.4C389.6,103.3 388.5,104.0 388.0,104.0C387.5,104.0 386.4,104.7 385.6,105.6L384.0,107.1L384.0,120.0L384.0,132.9L382.4,134.4C381.6,135.3 380.5,136.0 380.0,136.0C379.5,136.0 378.4,136.7 377.6,137.6L376.0,139.1L376.0,152.0L376.0,164.9L377.6,166.4L379.1,168.0L400.0,168.0L420.9,168.0L422.4,166.4ZM1494.4,166.4L1496.0,164.9L1496.0,156.0L1496.0,147.1L1494.4,145.6C1493.6,144.7 1492.5,144.0 1492.0,144.0C1491.5,144.0 1490.4,143.3 1489.6,142.4L1488.0,140.9L1488.0,128.0L1488.0,115.1L1486.4,113.6C1485.6,112.7 1484.5,112.0 1484.0,112.0C1483.5,112.0 1482.4,111.3 1481.6,110.4L1480.0,108.9L1480.0,96.0L1480.0,83.1L1477.0,80.8C1475.3,79.6 1473.1,77.1 1472.0,75.3L1470.1,72.0L1467.6,72.0C1464.2,72.0 1462.9,74.7 1463.7,80.8L1464.3,85.8L1460.9,87.5C1459.0,88.5 1457.2,89.8 1456.8,90.4C1456.4,91.0 1456.0,97.2 1456.0,104.2L1456.0,116.9L1454.4,118.4C1453.6,119.3 1452.5,120.0 1452.0,120.0C1451.5,120.0 1450.4,120.7 1449.6,121.6L1448.0,123.1L1448.0,135.6C1448.0,149.1 1447.4,151.4 1443.6,152.4L1441.2,153.0L1440.0,156.5L1438.8,160.0L1440.0,163.4C1440.6,165.3 1441.6,167.1 1442.3,167.4C1443.0,167.6 1454.6,167.9 1468.2,167.9L1492.9,168.0L1494.4,166.4ZM704.0,124.0L707.2,120.0L712.4,120.0C715.3,120.0 718.1,119.5 718.8,118.8L720.0,117.6L720.0,100.3L720.0,83.1L718.4,81.8C716.3,80.1 711.9,75.7 710.2,73.6L708.9,72.0L704.0,72.0L699.2,72.0L696.0,68.0L692.8,64.0L672.0,64.0L651.1,64.0L649.6,65.6L648.0,67.1L648.0,96.0L648.0,124.9L649.6,126.4L651.1,128.0L676.0,128.0L700.8,128.0L704.0,124.0Z"/></svg></div>
+      <div class="tag">HYROX CAMPAIGN</div>
+    </div>
+    <div class="photo"><img src="https://www.darimati.us/cdn/shop/t/4/assets/dm-pre-main-cut.webp?v=19841062237378604151789539291" alt="BR-001 CORE BLACK"></div>
+    <div class="head">
+      <div class="x">DARIMATI × F45</div>
+      <h1>HYROX<br>Ready<span>대회 전, 직접 신어보고 준비하세요.</span></h1>
+      <p class="lead">다가오는 HYROX 출전을 준비하는 F45 회원분들을 위한 캠페인입니다. 아직 신발을 정하지 못했거나 기존 신발이 불편한 회원분이 계시다면, 대회 전에 직접 신어보고 준비할 수 있도록 다리마티가 지원합니다.</p>
+      <p class="proof"><b>BR-001</b>은 실제 HYROX와 하이브리드 레이스 현장에서 선수들이 신고 입상한 제품입니다.</p>
+    </div>
+  </div>
+</header>
+
+<section class="offer">
+  <div class="wrap">
+    <div class="eyebrow">What we support</div>
+    <h2>F45 지점 지원 내용</h2>
+    <div class="grid">
+      <div class="cell k"><div class="no">01</div><div class="big">3<small>명</small></div><h3>출전 회원 신발 지원</h3><p>지점당 HYROX 출전 회원 최대 3명</p></div>
+      <div class="cell"><div class="no">02</div><div class="big">100<small>만원</small></div><h3>포디움 리워드</h3><p>1등은 총 200만원</p></div>
+      <div class="cell"><div class="no">03</div><div class="big">1<small>주</small></div><h3>지점 체험 운영</h3><p>230-280mm 체험 세트를 지점에 1주일 비치</p></div>
+      <div class="cell"><div class="no">04</div><div class="big">10<small>%</small></div><h3>회원 할인 + 지점 10%</h3><p>지점 코드 구매 시 회원 10% 할인, 판매금액 10% 지점 제공</p></div>
+    </div>
+    <p class="note">포디움 리워드는 BR-001 착용 출전, 싱글 Pro/Open 전체 순위 기준입니다. 팀 종목은 팀 단위로 지급합니다.</p>
+    <nav class="steps" aria-label="신청 바로가기">
+      <a href="#athletes"><small>FORM A</small>출전 회원 신발 지원</a>
+      <a href="#trial"><small>FORM B</small>1주일 지점 체험</a>
+    </nav>
+  </div>
+</section>
+
+<section class="sec" id="branch-sec">
+  <div class="wrap">
+    <div class="eyebrow">Step 1 / Branch</div>
+    <h2>지점 정보를 먼저 입력해 주세요</h2>
+    <p class="desc">아래 두 신청서에 공통으로 들어갑니다.</p>
+    <div class="field"><label for="b-name">F45 지점명 <span class="req">필수</span></label>
+      <input type="text" id="b-name" list="branches" placeholder="예: F45 신용산" autocomplete="organization">
+      <datalist id="branches"><option value="F45 신용산"><option value="F45 연신내"><option value="F45 보라매"><option value="F45 수유"><option value="F45 화정"><option value="F45 역삼"><option value="F45 강남"><option value="F45 여의도"></datalist>
+    </div>
+    <div class="row2">
+      <div class="field"><label for="b-mgr">담당자 성함 <span class="req">필수</span></label><input type="text" id="b-mgr" autocomplete="name"></div>
+      <div class="field"><label for="b-tel">담당자 연락처 <span class="req">필수</span></label><input type="tel" id="b-tel" placeholder="010-0000-0000" autocomplete="tel"></div>
+    </div>
+    <div class="field"><label for="b-mail">담당자 이메일 <span class="req">필수</span></label><input type="email" id="b-mail" placeholder="branch@example.com" autocomplete="email"></div>
+  </div>
+</section>
+
+<section class="sec" id="athletes">
+  <div class="wrap">
+    <div class="eyebrow">Form A / Athletes</div>
+    <h2>HYROX 출전 회원 신발 지원 신청</h2>
+    <p class="desc">BR-001을 신고 HYROX에 출전할 회원을 지점당 최대 3명까지 신청할 수 있습니다. 블랙 모델은 10월 말 일괄 지급됩니다.</p>
+    <form id="form-a" novalidate>
+      <div id="athlete-list"></div>
+      <button type="button" class="add" id="add-athlete">+ 출전 회원 추가 <span id="count">(1/3)</span></button>
+      <label class="consent"><input type="checkbox" id="a-consent"><span><b>[필수] 개인정보 수집/이용 동의</b><br>신청 회원의 개인정보(성명, 연락처, 인스타그램, 사이즈, 출전 정보)를 신발 지원과 리워드 지급 목적으로 수집/이용하는 데 동의하며, 회원 본인에게 동의를 받았습니다.</span></label>
+      <label class="consent"><input type="checkbox" id="a-mkt"><span><b>[필수] 콘텐츠/마케팅 활용 동의</b><br>신청 회원의 성명, 사진, 영상, 대회 기록을 다리마티 공식 채널(SNS/웹사이트/매거진)의 홍보 콘텐츠로 활용하는 데 동의하며, 회원 본인에게 동의를 받았습니다.</span></label>
+      <button type="submit" class="submit" id="a-submit">출전 회원 지원 신청하기</button>
+      <div class="msg" id="a-msg" hidden></div>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="trial">
+  <div class="wrap">
+    <div class="eyebrow">Form B / Trial Week</div>
+    <h2>1주일 지점 체험 신청</h2>
+    <p class="desc">230-280mm(10mm 단위) 체험 세트를 지점마다 1주일씩 순환 운영합니다. 원하는 주차를 1지망, 2지망으로 골라 주세요.</p>
+
+    <form id="form-b" novalidate>
+      <div class="lbl" style="margin-top:20px">체험 모델</div>
+      <div class="model">
+        <label class="opt"><input type="checkbox" id="m-black" checked><b><i class="sw" style="background:#121212"></i>CORE BLACK</b><span class="s">신규 블랙 모델 / 10/19 주차부터 운영</span></label>
+        <label class="opt"><input type="checkbox" id="m-grey"><b><i class="sw" style="background:#b9bab5"></i>그레이 믹스도 괜찮아요</b><span class="s">블랙 재고에 맞춰 기존 Oyster Grey를 섞어 구성 / 이번 주부터 가능</span></label>
+      </div>
+
+      <div class="lbl" style="margin-top:22px">희망 주차 <span style="font-weight:400;color:var(--mute)">/ 한 번 누르면 1지망, 한 번 더 누르면 2지망</span></div>
+      <div class="cal" id="cal"></div>
+      <p class="calhint" id="calhint"></p>
+
+      <div class="field"><label for="b-note">요청 사항</label><textarea id="b-note" rows="3" placeholder="예: 월요일 오전 수령 희망, 체험 세션 계획 등"></textarea></div>
+
+      <label class="consent"><input type="checkbox" id="b-consent">지점 담당자 연락처를 체험 일정 안내 목적으로 수집/이용하는 데 동의합니다.</label>
+      <button type="submit" class="submit" id="b-submit">체험 주차 신청하기</button>
+      <div class="msg" id="b-msg" hidden></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>주식회사 다리마티</b> / 대표 황현욱<br>
+    문의 <span class="sel">010-8720-3266</span> / <span class="sel">company@darimati.us</span><br>
+    경기도 고양시 덕양구 향동로 218, 9층 921호
+  </div>
+</footer>
+
+<iframe name="shopify-frame" style="display:none" aria-hidden="true"></iframe>
+
+<script>
+(function(){
+  // ---------- athletes ----------
+  var MAX=3, list=document.getElementById('athlete-list'), addBtn=document.getElementById('add-athlete'), countEl=document.getElementById('count');
+  var sizes=[];for(var s=230;s<=300;s+=10)sizes.push(s);
+  function athleteHTML(i){
+    var opts='<option value="">선택</option>'+sizes.map(function(v){return '<option>'+v+'</option>'}).join('');
+    return '<div class="athlete" data-i="'+i+'"><div class="ah"><b>ATHLETE 0'+i+'</b>'+(i>1?'<button type="button" class="rm">삭제</button>':'')+'</div>'+
+      '<div class="row2"><div class="field"><label for="a'+i+'-name">성명 <span class="req">필수</span></label><input type="text" id="a'+i+'-name" data-k="성명"></div>'+
+      '<div class="field"><label for="a'+i+'-tel">연락처 <span class="req">필수</span></label><input type="tel" id="a'+i+'-tel" data-k="연락처" placeholder="010-0000-0000"></div></div>'+
+      '<div class="row2"><div class="field"><label for="a'+i+'-ig">인스타그램</label><input type="text" id="a'+i+'-ig" data-k="인스타그램" placeholder="@id"></div>'+
+      '<div class="field"><label for="a'+i+'-size">사이즈(mm) <span class="req">필수</span></label><select id="a'+i+'-size" data-k="사이즈">'+opts+'</select></div></div>'+
+      '<div class="row2"><div class="field"><label for="a'+i+'-race">출전 대회/일정 <span class="req">필수</span></label><input type="text" id="a'+i+'-race" data-k="출전 대회" placeholder="예: HYROX 인천 11/22"></div>'+
+      '<div class="field"><label for="a'+i+'-div">출전 부문 <span class="req">필수</span></label><select id="a'+i+'-div" data-k="부문"><option value="">선택</option><option>싱글 Open</option><option>싱글 Pro</option><option>더블스</option><option>릴레이</option></select></div></div>'+
+      '</div>';
+  }
+  function renumber(){
+    var cards=list.querySelectorAll('.athlete');
+    countEl.textContent='('+cards.length+'/'+MAX+')';
+    addBtn.disabled=cards.length>=MAX;
+  }
+  function add(){
+    var n=list.querySelectorAll('.athlete').length; if(n>=MAX)return;
+    var used={};list.querySelectorAll('.athlete').forEach(function(c){used[c.dataset.i]=1});
+    var i=1;while(used[i])i++;
+    list.insertAdjacentHTML('beforeend',athleteHTML(i)); renumber();
+  }
+  list.addEventListener('click',function(e){if(e.target.classList.contains('rm')){e.target.closest('.athlete').remove();renumber();}});
+  addBtn.addEventListener('click',add);
+  add();
+
+  // ---------- weeks ----------
+  var weeks=[], start=new Date(2026,9,5), blackFrom=new Date(2026,9,19), today=new Date();
+  for(var w=0;w<8;w++){var a=new Date(start);a.setDate(start.getDate()+w*7);var b=new Date(a);b.setDate(a.getDate()+6);weeks.push({a:a,b:b,id:'w'+w});}
+  var cal=document.getElementById('cal'), hint=document.getElementById('calhint'), mB=document.getElementById('m-black'), mG=document.getElementById('m-grey');
+  var pick1=null,pick2=null;
+  function md(d){return (d.getMonth()+1)+'/'+d.getDate()}
+  function isBlack(wk){return wk.a>=blackFrom}
+  function available(wk){
+    var endPast=wk.b<new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    if(endPast)return false;
+    var ok=false; if(mB.checked&&isBlack(wk))ok=true; if(mG.checked)ok=true; return ok;
+  }
+  function weekLabel(wk){return md(wk.a)+' - '+md(wk.b)}
+  function render(){
+    if(pick1&&!available(weeks.find(function(x){return x.id===pick1})))pick1=null;
+    if(pick2&&!available(weeks.find(function(x){return x.id===pick2})))pick2=null;
+    cal.innerHTML=weeks.map(function(wk,idx){
+      var on=available(wk), cls='week'+(on?'':' off')+(pick1===wk.id?' sel1':'')+(pick2===wk.id?' sel2':'');
+      var chips=isBlack(wk)?'<span class="chip b">BLACK</span><span class="chip g">MIX</span>':'<span class="chip g">GREY만</span>';
+      var p=pick1===wk.id?'1지망':(pick2===wk.id?'2지망':'');
+      return '<button type="button" class="'+cls+'" data-id="'+wk.id+'" '+(on?'':'disabled aria-disabled="true"')+' style="font:inherit;text-align:left;color:inherit">'+
+        '<span class="wn">W'+(idx+1)+'</span><span class="wd">'+weekLabel(wk)+chips+'<small>'+(isBlack(wk)?'월요일 수령 / 일요일 반납':(idx===0?'이번 주 / ':'')+'그레이 모델만 운영')+'</small></span><span class="pick">'+p+'</span></button>';
+    }).join('');
+    if(!mB.checked&&!mG.checked)hint.textContent='체험할 모델을 하나 이상 선택해 주세요.';
+    else if(mB.checked&&!mG.checked)hint.textContent='블랙 모델은 10/19 주차부터 운영합니다. 그 전 주차 체험을 원하시면 그레이 믹스도 선택해 주세요.';
+    else hint.textContent='체험 세트는 230-280mm 구성이 원칙이며, 그레이 믹스를 선택하시면 블랙과 그레이를 섞어 보내드립니다. 신청이 겹치는 주차는 조율 후 확정 안내드립니다.';
+  }
+  cal.addEventListener('click',function(e){
+    var b=e.target.closest('.week'); if(!b||b.disabled)return; var id=b.dataset.id;
+    if(pick1===id){pick1=pick2;pick2=null;}
+    else if(pick2===id){pick2=null;}
+    else if(!pick1){pick1=id;}
+    else {pick2=id;}
+    render();
+  });
+  mB.addEventListener('change',render); mG.addEventListener('change',render);
+  render();
+
+  // ---------- form helpers ----------
+  var branchIds=[['b-name','지점명'],['b-mgr','담당자'],['b-tel','담당자 연락처']];
+  function val(id){return (document.getElementById(id).value||'').trim()}
+  function show(el,ok,text){el.hidden=false;el.className='msg '+(ok?'ok':'err');el.textContent=text}
+  function branchOK(msgEl){
+    var miss=branchIds.filter(function(p){return !val(p[0])}).map(function(p){return p[1]});
+    if(!val('b-mail'))miss.push('담당자 이메일');
+    if(miss.length){show(msgEl,false,'지점 정보에 '+miss.join(', ')+'을(를) 입력해 주세요.');document.getElementById('branch-sec').scrollIntoView();return false}
+    return true;
+  }
+
+  // ---------- submit to Shopify via hidden iframe ----------
+  function postToShopify(pairs, formType){
+    var form=document.createElement('form');
+    form.method='POST';
+    form.action='https://www.darimati.us/contact';
+    form.target='shopify-frame';
+    form.style.display='none';
+    var addField=function(n,v){var inp=document.createElement('input');inp.type='hidden';inp.name=n;inp.value=v;form.appendChild(inp)};
+    addField('form_type','contact');
+    addField('utf8','\u2713');
+    pairs.forEach(function(p){addField(p[0],p[1])});
+    document.body.appendChild(form);
+    form.submit();
+    setTimeout(function(){form.remove()},2000);
+  }
+
+  function branchPairs(){
+    return [['contact[email]',val('b-mail')],['contact[name]',val('b-name')+' / '+val('b-mgr')],['contact[phone]',val('b-tel')],['contact[지점명]',val('b-name')]];
+  }
+
+  // ---------- Form A submit ----------
+  document.getElementById('form-a').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('a-msg');
+    if(!branchOK(m))return;
+    var cards=[].slice.call(list.querySelectorAll('.athlete')), pairs=branchPairs(), bad=[];
+    pairs.push(['contact[구분]','A. HYROX 출전 회원 신발 지원']);
+    cards.forEach(function(c,n){
+      var vals={};c.querySelectorAll('[data-k]').forEach(function(f){vals[f.dataset.k]=(f.value||'').trim()});
+      ['성명','연락처','사이즈','출전 대회','부문'].forEach(function(k){if(!vals[k])bad.push('선수 '+(n+1)+' '+k)});
+      pairs.push(['contact[선수'+(n+1)+']',[vals['성명'],vals['연락처'],vals['인스타그램']||'-',vals['사이즈']+'mm',vals['출전 대회'],vals['부문']].join(' / ')]);
+    });
+    if(bad.length){show(m,false,'다음 항목을 입력해 주세요: '+bad.join(', '));return}
+    if(!document.getElementById('a-consent').checked){show(m,false,'개인정보 수집/이용 동의에 체크해 주세요.');return}
+    if(!document.getElementById('a-mkt').checked){show(m,false,'콘텐츠/마케팅 활용 동의에 체크해 주세요.');return}
+    pairs.push(['contact[동의]','개인정보 수집/이용 동의, 콘텐츠/마케팅 활용 동의']);
+    var btn=document.getElementById('a-submit');btn.disabled=true;btn.textContent='접수 중...';
+    postToShopify(pairs,'A');
+    setTimeout(function(){
+      show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+      btn.disabled=false;btn.textContent='출전 회원 지원 신청하기';
+    },1500);
+  });
+
+  // ---------- Form B submit ----------
+  document.getElementById('form-b').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('b-msg');
+    if(!branchOK(m))return;
+    if(!mB.checked&&!mG.checked){show(m,false,'체험할 모델을 하나 이상 선택해 주세요.');return}
+    if(!pick1){show(m,false,'희망 주차를 1지망 이상 선택해 주세요.');return}
+    if(!document.getElementById('b-consent').checked){show(m,false,'개인정보 수집/이용 동의에 체크해 주세요.');return}
+    var w1=weeks.find(function(x){return x.id===pick1}), w2=pick2?weeks.find(function(x){return x.id===pick2}):null;
+    var model=[mB.checked?'블랙':null,mG.checked?'그레이 믹스 가능':null].filter(Boolean).join(', ');
+    var pairs=branchPairs().concat([
+      ['contact[구분]','B. 1주일 지점 체험'],
+      ['contact[체험 모델]',model],
+      ['contact[1지망]',weekLabel(w1)],
+      ['contact[2지망]',w2?weekLabel(w2):'-'],
+      ['contact[body]',val('b-note')||'-']
+    ]);
+    var btn=document.getElementById('b-submit');btn.disabled=true;btn.textContent='접수 중...';
+    postToShopify(pairs,'B');
+    setTimeout(function(){
+      show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
+      btn.disabled=false;btn.textContent='체험 주차 신청하기';
+    },1500);
+  });
+})();
+</script>
+</body>
+</html>
