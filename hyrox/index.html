@@ -305,16 +305,26 @@ html{scroll-behavior:smooth}
     return true;
   }
 
-  // ---------- FormSubmit.co AJAX backend ----------
+  // ---------- Form backend (Apps Script > FormSubmit fallback) ----------
+  var GAS_URL='';
   function sendForm(data, subject){
     data._subject=subject;
+    if(GAS_URL){
+      return fetch(GAS_URL,{
+        method:'POST',
+        headers:{'Content-Type':'text/plain'},
+        body:JSON.stringify(data)
+      }).then(function(r){return r.json()});
+    }
     data._template='table';
     data._captcha='false';
     return fetch('https://formsubmit.co/ajax/company@darimati.us',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(data)
-    }).then(function(r){return r.json()});
+    }).then(function(r){return r.json()}).then(function(res){
+      return {success: res.success==='true'||res.success===true};
+    });
   }
 
   // ---------- Form A submit ----------
@@ -341,7 +351,7 @@ html{scroll-behavior:smooth}
     data['동의']='개인정보 수집/이용 동의, 콘텐츠/마케팅 활용 동의';
     var btn=document.getElementById('a-submit');btn.disabled=true;btn.textContent='접수 중...';
     sendForm(data,'[HYROX] 출전 회원 신발 지원 - '+val('b-name')).then(function(res){
-      if(res.success){
+      if(res.success===true){
         show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
       } else {
         show(m,false,'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
@@ -376,7 +386,7 @@ html{scroll-behavior:smooth}
     };
     var btn=document.getElementById('b-submit');btn.disabled=true;btn.textContent='접수 중...';
     sendForm(data,'[HYROX] 지점 체험 신청 - '+val('b-name')).then(function(res){
-      if(res.success){
+      if(res.success===true){
         show(m,true,'신청이 접수되었습니다. 확인 후 담당자 연락처로 안내드리겠습니다.');
       } else {
         show(m,false,'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
